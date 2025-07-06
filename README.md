@@ -1,1 +1,1 @@
-# MdoomApplications.githib.io
+# MdoomApplications.github.io
