@@ -1,10 +1,473 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Test Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDWebView - Secure Mobile Web Browser for Business</title>
+    <meta name="description" content="MDWebView is a professional, secure Android web browser designed for businesses. Features include privacy controls, customizable settings, and enterprise-ready security.">
+    <meta name="keywords" content="android browser, business web browser, secure browser, mobile browser, enterprise browser">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .feature-icon {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
 </head>
-<body>
-    <h1>Hello from GitHub Pages!</h1>
-    <p>This is a test.</p>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-mobile-alt text-2xl text-indigo-600 mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">MDWebView</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-indigo-600 transition-colors">Features</a>
+                    <a href="#security" class="text-gray-700 hover:text-indigo-600 transition-colors">Security</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-indigo-600 transition-colors">Pricing</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition-colors">Contact</a>
+                    <a href="#download" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">Download</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Secure Mobile Browsing<br>
+                    <span class="text-indigo-200">for Your Business</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">
+                    MDWebView is a professional Android web browser designed with privacy and security in mind. Perfect for businesses that need controlled, secure web access.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#download" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Download Now
+                    </a>
+                    <a href="#features" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Built for Business
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    MDWebView offers enterprise-grade features while maintaining simplicity and ease of use.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                    <div class="feature-icon text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Privacy First</h3>
+                    <p class="text-gray-600">
+                        No data collection by the app itself. All settings stored locally on device using secure SharedPreferences.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                    <div class="feature-icon text-4xl mb-4">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Customizable Settings</h3>
+                    <p class="text-gray-600">
+                        Configure home page, zoom preferences, cookie management, and screen rotation to suit your business needs.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                    <div class="feature-icon text-4xl mb-4">
+                        <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Cookie Management</h3>
+                    <p class="text-gray-600">
+                        Advanced cookie controls with options for all cookies, third-party cookies, and complete cookie blocking.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                    <div class="feature-icon text-4xl mb-4">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Password Protection</h3>
+                    <p class="text-gray-600">
+                        Secure your browser settings with password protection to prevent unauthorized configuration changes.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                    <div class="feature-icon text-4xl mb-4">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Dark Mode</h3>
+                    <p class="text-gray-600">
+                        Built-in dark mode for comfortable browsing in low-light environments and reduced eye strain.
+                    </p>
+                </div>
+
+                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                    <div class="feature-icon text-4xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Mobile Optimized</h3>
+                    <p class="text-gray-600">
+                        Lightweight and fast Android browser optimized for mobile devices with intuitive touch controls.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section id="security" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                        Enterprise-Grade Security
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        MDWebView is designed with security as a top priority. Our minimalist approach means fewer attack vectors and better protection for your business.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">No Data Collection</h4>
+                                <p class="text-gray-600">App doesn't collect, store, or transmit any personal data</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Local Storage Only</h4>
+                                <p class="text-gray-600">All settings stored locally using secure SharedPreferences</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 text-xl mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Cookie Control</h4>
+                                <p class="text-gray-600">Advanced cookie management with granular controls</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-shield-alt text-6xl text-indigo-600 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-900">Privacy by Design</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-dot-circle text-indigo-600 mr-3"></i>
+                            No tracking or analytics
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-dot-circle text-indigo-600 mr-3"></i>
+                            No network requests from app
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-dot-circle text-indigo-600 mr-3"></i>
+                            No third-party integrations
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-dot-circle text-indigo-600 mr-3"></i>
+                            Open source transparency
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Simple, Transparent Pricing
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Choose the plan that fits your business needs. All plans include our core security features.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Personal</h3>
+                    <div class="text-3xl font-bold text-gray-900 mb-2">Free</div>
+                    <p class="text-gray-600 mb-6">For individual users</p>
+                    <ul class="space-y-3 text-gray-600 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Basic browser features
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Privacy controls
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Cookie management
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+                        Download Free
+                    </button>
+                </div>
+
+                <div class="bg-indigo-600 text-white p-8 rounded-xl transform scale-105 shadow-xl">
+                    <div class="text-center mb-4">
+                        <span class="bg-white text-indigo-600 px-3 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Business</h3>
+                    <div class="text-3xl font-bold mb-2">$9.99</div>
+                    <p class="text-indigo-200 mb-6">per device/month</p>
+                    <ul class="space-y-3 text-indigo-100 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-3"></i>
+                            All Personal features
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-3"></i>
+                            Password protection
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-3"></i>
+                            Priority support
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-white mr-3"></i>
+                            Enterprise configuration
+                        </li>
+                    </ul>
+                    <button class="w-full bg-white text-indigo-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Start Free Trial
+                    </button>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Enterprise</h3>
+                    <div class="text-3xl font-bold text-gray-900 mb-2">Custom</div>
+                    <p class="text-gray-600 mb-6">For large organizations</p>
+                    <ul class="space-y-3 text-gray-600 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            All Business features
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Volume discounts
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            Custom deployment
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            24/7 support
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-20 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Get Started?
+            </h2>
+            <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+                Download MDWebView today and experience secure, private browsing for your business.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">
+                    <i class="fab fa-google-play mr-2"></i>
+                    Download from Google Play
+                </a>
+                <a href="#" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-flex items-center">
+                    <i class="fas fa-download mr-2"></i>
+                    Direct APK Download
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Get in Touch
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Have questions about MDWebView? We're here to help you get the most out of our secure browser.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-indigo-600 text-xl mr-4"></i>
+                            <div>
+                                <p class="font-semibold text-gray-900">Email</p>
+                                <a href="mailto:mdoom2@gmail.com" class="text-indigo-600 hover:underline">mdoom2@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-indigo-600 text-xl mr-4"></i>
+                            <div>
+                                <p class="font-semibold text-gray-900">Support Hours</p>
+                                <p class="text-gray-600">Monday - Friday, 9AM - 6PM EST</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-life-ring text-indigo-600 text-xl mr-4"></i>
+                            <div>
+                                <p class="font-semibold text-gray-900">Response Time</p>
+                                <p class="text-gray-600">Within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-mobile-alt text-2xl text-indigo-400 mr-2"></i>
+                        <span class="text-xl font-bold">MDWebView</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Secure, private mobile browsing for businesses.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#security" class="hover:text-white transition-colors">Security</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#download" class="hover:text-white transition-colors">Download</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 MDWebView. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+        });
+    </script>
 </body>
 </html>

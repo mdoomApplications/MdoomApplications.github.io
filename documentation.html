@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - MDWebView</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .code-block {
+            background-color: #1e293b;
+            color: #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            overflow-x: auto;
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="/" class="flex items-center">
+                            <i class="fas fa-mobile-alt text-2xl text-indigo-600 mr-2"></i>
+                            <span class="text-xl font-bold text-gray-900">MDWebView</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-gray-700 hover:text-indigo-600 transition-colors">Home</a>
+                    <a href="/#download" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">Download</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">MDWebView Documentation</h1>
+            <p class="text-xl text-gray-600">Complete guide to using MDWebView for secure mobile browsing</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Sidebar Navigation -->
+            <nav class="lg:col-span-1">
+                <div class="sticky top-8">
+                    <h2 class="font-semibold text-lg mb-4 text-gray-900">Contents</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#getting-started" class="block p-2 rounded-md hover:bg-gray-100 transition-colors">Getting Started</a></li>
+                        <li><a href="#features" class="block p-2 rounded-md hover:bg-gray-100 transition-colors">Features</a></li>
+                        <li><a href="#configuration" class="block p-2 rounded-md hover:bg-gray-100 transition-colors">Configuration</a></li>
+                        <li><a href="#security" class="block p-2 rounded-md hover:bg-gray-100 transition-colors">Security</a></li>
+                        <li><a href="#troubleshooting" class="block p-2 rounded-md hover:bg-gray-100 transition-colors">Troubleshooting</a></li>
+                        <li><a href="#support" class="block p-2 rounded-md hover:bg-gray-100 transition-colors">Support</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="lg:col-span-3">
+                <!-- Getting Started -->
+                <section id="getting-started" class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Getting Started</h2>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Installation</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">From Google Play Store</h4>
+                                <p class="text-gray-600 mb-3">The easiest way to install MDWebView is through the Google Play Store.</p>
+                                <a href="#" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                                    <i class="fab fa-google-play mr-2"></i>
+                                    Download from Play Store
+                                </a>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">Direct APK Download</h4>
+                                <p class="text-gray-600 mb-3">For advanced users or enterprise deployment, download the APK directly.</p>
+                                <a href="#" class="inline-flex items-center bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                                    <i class="fas fa-download mr-2"></i>
+                                    Download APK
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">System Requirements</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                Android 5.0 (API level 21) or higher
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                Minimum 50MB storage space
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                Internet connection for browsing
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Features -->
+                <section id="features" class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Features</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="feature-card bg-white rounded-lg shadow-md p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-shield-alt text-indigo-600 text-2xl mr-3"></i>
+                                <h3 class="text-xl font-semibold text-gray-900">Privacy Protection</h3>
+                            </div>
+                            <p class="text-gray-600">No data collection by the application itself. All browsing data stays on your device.</p>
+                        </div>
+
+                        <div class="feature-card bg-white rounded-lg shadow-md p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-cogs text-indigo-600 text-2xl mr-3"></i>
+                                <h3 class="text-xl font-semibold text-gray-900">Customizable Settings</h3>
+                            </div>
+                            <p class="text-gray-600">Configure home page, zoom, rotation, and cookie preferences to suit your needs.</p>
+                        </div>
+
+                        <div class="feature-card bg-white rounded-lg shadow-md p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-cookie-bite text-indigo-600 text-2xl mr-3"></i>
+                                <h3 class="text-xl font-semibold text-gray-900">Cookie Management</h3>
+                            </div>
+                            <p class="text-gray-600">Advanced cookie controls with options for all cookies, third-party cookies, or complete blocking.</p>
+                        </div>
+
+                        <div class="feature-card bg-white rounded-lg shadow-md p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-lock text-indigo-600 text-2xl mr-3"></i>
+                                <h3 class="text-xl font-semibold text-gray-900">Password Protection</h3>
+                            </div>
+                            <p class="text-gray-600">Secure your browser settings with password protection to prevent unauthorized changes.</p>
+                        </div>
+
+                        <div class="feature-card bg-white rounded-lg shadow-md p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-moon text-indigo-600 text-2xl mr-3"></i>
+                                <h3 class="text-xl font-semibold text-gray-900">Dark Mode</h3>
+                            </div>
+                            <p class="text-gray-600">Built-in dark mode for comfortable browsing in low-light environments.</p>
+                        </div>
+
+                        <div class="feature-card bg-white rounded-lg shadow-md p-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-mobile-alt text-indigo-600 text-2xl mr-3"></i>
+                                <h3 class="text-xl font-semibold text-gray-900">Mobile Optimized</h3>
+                            </div>
+                            <p class="text-gray-600">Lightweight and fast browser optimized for mobile devices with intuitive touch controls.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Configuration -->
+                <section id="configuration" class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Configuration</h2>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Basic Settings</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">Home Page</h4>
+                                <p class="text-gray-600 mb-2">Set your preferred home page URL that loads when the app starts.</p>
+                                <div class="code-block">
+                                    <code>Settings → Home Page → Enter URL</code>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">Zoom Settings</h4>
+                                <p class="text-gray-600 mb-2">Enable or disable zoom functionality for better accessibility.</p>
+                                <div class="code-block">
+                                    <code>Settings → Display → Zoom Controls</code>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">Screen Rotation</h4>
+                                <p class="text-gray-600 mb-2">Control how the app responds to device rotation.</p>
+                                <div class="code-block">
+                                    <code>Settings → Display → Screen Rotation</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Advanced Settings</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">Cookie Management</h4>
+                                <p class="text-gray-600 mb-2">Configure how cookies are handled:</p>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                    <li>Allow all cookies</li>
+                                    <li>Block third-party cookies</li>
+                                    <li>Block all cookies</li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-medium text-gray-900 mb-2">Password Protection</h4>
+                                <p class="text-gray-600 mb-2">Protect your settings with a password to prevent unauthorized changes.</p>
+                                <div class="code-block">
+                                    <code>Settings → Security → Enable Password Protection</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Security -->
+                <section id="security" class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Security</h2>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Privacy Features</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-shield-alt text-green-500 text-xl mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">No Data Collection</h4>
+                                    <p class="text-gray-600">MDWebView does not collect, store, or transmit any personal data or browsing history.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-database text-green-500 text-xl mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">Local Storage</h4>
+                                    <p class="text-gray-600">All settings and preferences are stored locally on your device using secure SharedPreferences.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-network-wired text-green-500 text-xl mr-3 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">No Network Requests</h4>
+                                    <p class="text-gray-600">The app itself makes no network requests except for the websites you choose to visit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6">
+                        <div class="flex">
+                            <i class="fas fa-exclamation-triangle text-yellow-400 text-xl mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-yellow-800">Important Security Note</h4>
+                                <p class="text-yellow-700 mt-1">While MDWebView itself doesn't collect data, the websites you visit may collect information according to their privacy policies. Always review website privacy policies before providing personal information.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Troubleshooting -->
+                <section id="troubleshooting" class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Troubleshooting</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Common Issues</h3>
+                            
+                            <div class="space-y-4">
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-2">App won't load websites</h4>
+                                    <p class="text-gray-600 mb-2">Check your internet connection and try again.</p>
+                                    <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                        <li>Verify you have an active internet connection</li>
+                                        <li>Check if the website URL is correct</li>
+                                        <li>Try loading a different website</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-2">Settings not saving</h4>
+                                    <p class="text-gray-600 mb-2">Ensure the app has proper permissions:</p>
+                                    <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                        <li>Go to Android Settings → Apps → MDWebView</li>
+                                        <li>Check that storage permissions are enabled</li>
+                                        <li>Restart the app after changing permissions</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-medium text-gray-900 mb-2">Cookies not working</h4>
+                                    <p class="text-gray-600 mb-2">Check your cookie settings:</p>
+                                    <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                        <li>Go to Settings → Cookie Management</li>
+                                        <li>Ensure cookies are enabled for the websites you need</li>
+                                        <li>Try clearing existing cookies and reload the page</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-lg shadow-md p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">Performance Tips</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-lightbulb text-yellow-500 mr-3 mt-1"></i>
+                                    <span>Clear browser cache regularly for better performance</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-lightbulb text-yellow-500 mr-3 mt-1"></i>
+                                    <span>Close unused tabs to free up memory</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-lightbulb text-yellow-500 mr-3 mt-1"></i>
+                                    <span>Use dark mode to reduce battery consumption</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Support -->
+                <section id="support" class="mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Support</h2>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4">Get Help</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-indigo-600 text-xl mr-4"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Email Support</p>
+                                    <a href="mailto:mdoom2@gmail.com" class="text-indigo-600 hover:underline">mdoom2@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-indigo-600 text-xl mr-4"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Response Time</p>
+                                    <p class="text-gray-600">Within 24 hours</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <i class="fas fa-business-time text-indigo-600 text-xl mr-4"></i>
+                                <div>
+                                    <p class="font-semibold text-gray-900">Support Hours</p>
+                                    <p class="text-gray-600">Monday - Friday, 9AM - 6PM EST</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 pt-6 border-t border-gray-200">
+                            <h4 class="font-semibold text-gray-900 mb-2">When contacting support, please include:</h4>
+                            <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                                <li>Your device model and Android version</li>
+                                <li>MDWebView version number</li>
+                                <li>Description of the issue</li>
+                                <li>Steps to reproduce the problem</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
