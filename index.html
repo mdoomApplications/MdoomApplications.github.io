@@ -135,6 +135,91 @@
             overflow: hidden;
             position: relative;
         }
+        
+        /* System mockup styles */
+        .system-mockup {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 8px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .system-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .system-content {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .system-row {
+            background: #e5e7eb;
+            height: 4px;
+            border-radius: 2px;
+            animation: pulse 2s infinite;
+        }
+        
+        .system-row:nth-child(1) { width: 100%; }
+        .system-row:nth-child(2) { width: 85%; }
+        .system-row:nth-child(3) { width: 70%; }
+        .system-row:nth-child(4) { width: 90%; }
+        
+        .sap-theme { background: linear-gradient(135deg, #0070f3 0%, #003d82 100%); }
+        .pos-theme { background: linear-gradient(135deg, #10b981 0%, #059669 100%); }
+        .reservation-theme { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); }
+        .warehouse-theme { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); }
+        
+        .system-icon {
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+            font-size: 24px;
+            opacity: 0.1;
+        }
+        
+        .systems-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+        
+        .system-showcase {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .system-showcase:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .system-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1f2937;
+        }
+        
+        .system-description {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 16px;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -152,6 +237,10 @@
                     <a href="#features" class="text-gray-700 hover:text-blue-600 transition-colors">
                         <span data-lang="en">Features</span>
                         <span data-lang="cz">Funkce</span>
+                    </a>
+                    <a href="#systems" class="text-gray-700 hover:text-blue-600 transition-colors">
+                        <span data-lang="en">Systems</span>
+                        <span data-lang="cz">Systémy</span>
                     </a>
                     <a href="#use-cases" class="text-gray-700 hover:text-blue-600 transition-colors">
                         <span data-lang="en">Use Cases</span>
@@ -193,6 +282,10 @@
                     <a href="#features" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
                         <span data-lang="en">Features</span>
                         <span data-lang="cz">Funkce</span>
+                    </a>
+                    <a href="#systems" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+                        <span data-lang="en">Systems</span>
+                        <span data-lang="cz">Systémy</span>
                     </a>
                     <a href="#use-cases" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
                         <span data-lang="en">Use Cases</span>
@@ -248,30 +341,266 @@
                 </div>
                 <div class="relative">
                     <div class="device-frame max-w-sm mx-auto">
-                        <div class="device-screen aspect-[9/16] p-4">
+                        <div class="device-screen aspect-[9/16] p-3">
                             <div class="kiosk-pattern absolute top-0 left-0 right-0"></div>
                             <div class="relative z-10">
-                                <div class="bg-blue-600 text-white p-2 rounded-t-lg text-sm text-center">
-                                    <span data-lang="en">Your ERP System</span>
-                                    <span data-lang="cz">Váš ERP Systém</span>
-                                </div>
-                                <div class="bg-gray-100 p-4 rounded-b-lg">
-                                    <div class="flex items-center justify-center mb-4">
-                                        <i class="fas fa-globe text-4xl text-blue-600"></i>
+                                <div class="system-mockup">
+                                    <div class="system-header bg-gradient-to-r from-blue-600 to-blue-700">
+                                        <i class="fas fa-globe mr-2"></i>
+                                        <span data-lang="en">Your ERP System</span>
+                                        <span data-lang="cz">Váš ERP Systém</span>
                                     </div>
-                                    <h3 class="text-lg font-bold text-gray-900 text-center mb-2">
-                                        <span data-lang="en">Fullscreen Kiosk Mode</span>
-                                        <span data-lang="cz">Fullscreen Kiosk Režim</span>
-                                    </h3>
-                                    <div class="space-y-2">
-                                        <div class="bg-gray-300 h-2 rounded animate-pulse"></div>
-                                        <div class="bg-gray-300 h-2 rounded animate-pulse"></div>
-                                        <div class="bg-gray-300 h-2 rounded animate-pulse"></div>
+                                    <div class="system-content">
+                                        <div class="system-row"></div>
+                                        <div class="system-row"></div>
+                                        <div class="system-row"></div>
+                                        <div class="system-row"></div>
+                                    </div>
+                                    <div class="system-icon">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                </div>
+                                <div class="system-mockup">
+                                    <div class="system-header bg-gradient-to-r from-green-600 to-green-700">
+                                        <i class="fas fa-mobile-alt mr-2"></i>
+                                        <span data-lang="en">Kiosk Mode</span>
+                                        <span data-lang="cz">Kiosk Režim</span>
+                                    </div>
+                                    <div class="system-content">
+                                        <div class="system-row"></div>
+                                        <div class="system-row"></div>
+                                        <div class="system-row"></div>
+                                    </div>
+                                    <div class="system-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <div class="text-xs text-gray-600">
+                                        <span data-lang="en">✓ Fullscreen Experience</span>
+                                        <span data-lang="cz">✓ Fullscreen Zážitek</span>
+                                    </div>
+                                    <div class="text-xs text-gray-600">
+                                        <span data-lang="en">✓ Custom URL Config</span>
+                                        <span data-lang="cz">✓ Vlastní URL Konfigurace</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ERP Systems Gallery Section -->
+    <section id="systems" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    <span data-lang="en">Any ERP System, Any Device</span>
+                    <span data-lang="cz">Jakýkoli ERP Systém, Jakékoli Zařízení</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <span data-lang="en">Transform your existing ERP system into a mobile-first kiosk application. Simply configure your URL and deploy across your handheld devices.</span>
+                    <span data-lang="cz">Transformujte svůj stávající ERP systém na mobilní kiosk aplikaci. Jednoduše nakonfigurujte URL a nasaďte na svých handheld zařízeních.</span>
+                </p>
+            </div>
+
+            <div class="systems-gallery">
+                <!-- SAP System -->
+                <div class="system-showcase">
+                    <div class="system-title">
+                        <span data-lang="en">SAP Business Suite</span>
+                        <span data-lang="cz">SAP Business Suite</span>
+                    </div>
+                    <div class="system-description">
+                        <span data-lang="en">Complete SAP interface optimized for handheld devices with warehouse management, inventory control, and production planning.</span>
+                        <span data-lang="cz">Kompletní SAP rozhraní optimalizované pro handheld zařízení se správou skladu, kontrolou zásob a plánováním výroby.</span>
+                    </div>
+                    <div class="device-frame max-w-xs mx-auto">
+                        <div class="device-screen aspect-[9/16] p-3">
+                            <div class="system-mockup">
+                                <div class="system-header sap-theme">
+                                    <i class="fas fa-cube mr-2"></i>
+                                    <span data-lang="en">SAP ERP - Warehouse</span>
+                                    <span data-lang="cz">SAP ERP - Sklad</span>
+                                </div>
+                                <div class="system-content">
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                </div>
+                                <div class="system-icon">
+                                    <i class="fas fa-cube"></i>
+                                </div>
+                            </div>
+                            <div class="system-mockup">
+                                <div class="system-header sap-theme">
+                                    <i class="fas fa-chart-bar mr-2"></i>
+                                    <span data-lang="en">Inventory Control</span>
+                                    <span data-lang="cz">Kontrola Zásob</span>
+                                </div>
+                                <div class="system-content">
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- POS System -->
+                <div class="system-showcase">
+                    <div class="system-title">
+                        <span data-lang="en">POS & Retail System</span>
+                        <span data-lang="cz">POS & Maloobchodní Systém</span>
+                    </div>
+                    <div class="system-description">
+                        <span data-lang="en">Point of sale systems with inventory management, customer service, and payment processing for retail environments.</span>
+                        <span data-lang="cz">Pokladní systémy se správou zásob, zákaznickým servisem a zpracováním plateb pro maloobchodní prostředí.</span>
+                    </div>
+                    <div class="device-frame max-w-xs mx-auto">
+                        <div class="device-screen aspect-[9/16] p-3">
+                            <div class="system-mockup">
+                                <div class="system-header pos-theme">
+                                    <i class="fas fa-cash-register mr-2"></i>
+                                    <span data-lang="en">POS Terminal</span>
+                                    <span data-lang="cz">POS Terminál</span>
+                                </div>
+                                <div class="system-content">
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                </div>
+                                <div class="system-icon">
+                                    <i class="fas fa-cash-register"></i>
+                                </div>
+                            </div>
+                            <div class="system-mockup">
+                                <div class="system-header pos-theme">
+                                    <i class="fas fa-shopping-cart mr-2"></i>
+                                    <span data-lang="en">Customer Orders</span>
+                                    <span data-lang="cz">Objednávky Zákazníků</span>
+                                </div>
+                                <div class="system-content">
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reservation System -->
+                <div class="system-showcase">
+                    <div class="system-title">
+                        <span data-lang="en">Reservation System</span>
+                        <span data-lang="cz">Rezervační Systém</span>
+                    </div>
+                    <div class="system-description">
+                        <span data-lang="en">Hotel, restaurant, and service booking systems with calendar management, customer profiles, and scheduling features.</span>
+                        <span data-lang="cz">Rezervační systémy pro hotely, restaurace a služby s kalendářem, profily zákazníků a funkcemi plánování.</span>
+                    </div>
+                    <div class="device-frame max-w-xs mx-auto">
+                        <div class="device-screen aspect-[9/16] p-3">
+                            <div class="system-mockup">
+                                <div class="system-header reservation-theme">
+                                    <i class="fas fa-calendar-alt mr-2"></i>
+                                    <span data-lang="en">Booking Calendar</span>
+                                    <span data-lang="cz">Rezervační Kalendář</span>
+                                </div>
+                                <div class="system-content">
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                </div>
+                                <div class="system-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                            </div>
+                            <div class="system-mockup">
+                                <div class="system-header reservation-theme">
+                                    <i class="fas fa-user-friends mr-2"></i>
+                                    <span data-lang="en">Guest Management</span>
+                                    <span data-lang="cz">Správa Hostů</span>
+                                </div>
+                                <div class="system-content">
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Warehouse Management -->
+                <div class="system-showcase">
+                    <div class="system-title">
+                        <span data-lang="en">Warehouse Management</span>
+                        <span data-lang="cz">Správa Skladu</span>
+                    </div>
+                    <div class="system-description">
+                        <span data-lang="en">Complete WMS solution with picking, packing, inventory tracking, and shipping management for logistics operations.</span>
+                        <span data-lang="cz">Kompletní WMS řešení s komisováním, balením, sledováním zásob a správou expedice pro logistické operace.</span>
+                    </div>
+                    <div class="device-frame max-w-xs mx-auto">
+                        <div class="device-screen aspect-[9/16] p-3">
+                            <div class="system-mockup">
+                                <div class="system-header warehouse-theme">
+                                    <i class="fas fa-warehouse mr-2"></i>
+                                    <span data-lang="en">WMS Dashboard</span>
+                                    <span data-lang="cz">WMS Dashboard</span>
+                                </div>
+                                <div class="system-content">
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                </div>
+                                <div class="system-icon">
+                                    <i class="fas fa-warehouse"></i>
+                                </div>
+                            </div>
+                            <div class="system-mockup">
+                                <div class="system-header warehouse-theme">
+                                    <i class="fas fa-boxes mr-2"></i>
+                                    <span data-lang="en">Inventory Tracking</span>
+                                    <span data-lang="cz">Sledování Zásob</span>
+                                </div>
+                                <div class="system-content">
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                    <div class="system-row"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <p class="text-lg text-gray-600 mb-8">
+                    <span data-lang="en">Configure any web-based system URL and instantly create a dedicated kiosk application</span>
+                    <span data-lang="cz">Nakonfigurujte jakoukoliv webovou systémovou URL a okamžitě vytvořte vyhrazenou kiosk aplikaci</span>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
+                        <i class="fas fa-cog mr-2"></i>
+                        <span data-lang="en">Configure Your System</span>
+                        <span data-lang="cz">Nakonfigurujte Váš Systém</span>
+                    </a>
+                    <a href="#features" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors inline-flex items-center">
+                        <i class="fas fa-play mr-2"></i>
+                        <span data-lang="en">See Features</span>
+                        <span data-lang="cz">Zobrazit Funkce</span>
+                    </a>
                 </div>
             </div>
         </div>
