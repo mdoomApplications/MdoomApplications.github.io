@@ -1048,80 +1048,70 @@
 
                 <div class="bg-white p-8 rounded-xl shadow-lg">
                     <h3 class="text-2xl font-bold text-gray-900 mb-6">
-                        <span data-lang="en">Quick Start Request</span>
-                        <span data-lang="cz">Žádost o Rychlé Spuštění</span>
+                        <span data-lang="en">Direct Contact Options</span>
+                        <span data-lang="cz">Přímé Kontaktní Možnosti</span>
                     </h3>
-                    <form id="contact-form" class="space-y-4">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">
-                                    <span data-lang="en">Name</span>
-                                    <span data-lang="cz">Jméno</span>
-                                </label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <div class="space-y-6">
+                        <div class="text-center">
+                            <div class="bg-blue-50 p-6 rounded-lg mb-4">
+                                <i class="fab fa-google-play text-4xl text-blue-600 mb-3"></i>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                                    <span data-lang="en">Private Use</span>
+                                    <span data-lang="cz">Soukromé Použití</span>
+                                </h4>
+                                <p class="text-gray-600 text-sm mb-4">
+                                    <span data-lang="en">Download directly from Google Play Store</span>
+                                    <span data-lang="cz">Stáhněte si přímo z Google Play Store</span>
+                                </p>
+                                <a href="https://play.google.com/store/apps/details?id=com.mdoom.webview" target="_blank" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                    <i class="fab fa-google-play mr-2"></i>
+                                    <span data-lang="en">Download Now</span>
+                                    <span data-lang="cz">Stáhnout Nyní</span>
+                                </a>
                             </div>
-                            <div>
-                                <label for="company" class="block text-sm font-medium text-gray-700 mb-1">
-                                    <span data-lang="en">Company</span>
-                                    <span data-lang="cz">Společnost</span>
-                                </label>
-                                <input type="text" id="company" name="company" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        
+                        <div class="border-t pt-6">
+                            <div class="bg-green-50 p-6 rounded-lg text-center">
+                                <i class="fas fa-building text-4xl text-green-600 mb-3"></i>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                                    <span data-lang="en">Enterprise Solutions</span>
+                                    <span data-lang="cz">Podniková Řešení</span>
+                                </h4>
+                                <p class="text-gray-600 text-sm mb-4">
+                                    <span data-lang="en">Custom deployment, volume licensing, technical support</span>
+                                    <span data-lang="cz">Vlastní nasazení, multilicence, technická podpora</span>
+                                </p>
+                                <a href="mailto:mdoom2@gmail.com" class="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                                    <i class="fas fa-envelope mr-2"></i>
+                                    <span data-lang="en">Contact Enterprise</span>
+                                    <span data-lang="cz">Kontaktovat Podnik</span>
+                                </a>
+                                <div class="mt-3 text-sm text-gray-600">
+                                    <strong>mdoom2@gmail.com</strong>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
-                                <span data-lang="en">Email</span>
-                                <span data-lang="cz">Email</span>
-                            </label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        
+                        <div class="border-t pt-6">
+                            <div class="bg-gray-50 p-6 rounded-lg text-center">
+                                <i class="fas fa-question-circle text-4xl text-gray-600 mb-3"></i>
+                                <h4 class="text-lg font-semibold text-gray-900 mb-2">
+                                    <span data-lang="en">Technical Support</span>
+                                    <span data-lang="cz">Technická Podpora</span>
+                                </h4>
+                                <p class="text-gray-600 text-sm mb-4">
+                                    <span data-lang="en">Configuration help, troubleshooting, device setup</span>
+                                    <span data-lang="cz">Pomoc s konfigurací, řešení problémů, nastavení zařízení</span>
+                                </p>
+                                <a href="mailto:mdoom2@gmail.com?subject=Technical%20Support%20Request" class="inline-flex items-center bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors">
+                                    <i class="fas fa-cogs mr-2"></i>
+                                    <span data-lang="en">Get Support</span>
+                                    <span data-lang="cz">Získat Podporu</span>
+                                </a>
+                            </div>
                         </div>
-                        <div>
-                            <label for="erp-system" class="block text-sm font-medium text-gray-700 mb-1">
-                                <span data-lang="en">ERP System</span>
-                                <span data-lang="cz">ERP Systém</span>
-                            </label>
-                            <input type="text" id="erp-system" name="erp-system" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="SAP, Oracle, NetSuite, etc.">
-                        </div>
-                        <div>
-                            <label for="device-type" class="block text-sm font-medium text-gray-700 mb-1">
-                                <span data-lang="en">Device Type</span>
-                                <span data-lang="cz">Typ Zařízení</span>
-                            </label>
-                            <select id="device-type" name="device-type" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                                <option value="">
-                                    <span data-lang="en">Select device type</span>
-                                    <span data-lang="cz">Vyberte typ zařízení</span>
-                                </option>
-                                <option value="handheld">
-                                    <span data-lang="en">Handheld Scanner</span>
-                                    <span data-lang="cz">Handheld Skener</span>
-                                </option>
-                                <option value="tablet">
-                                    <span data-lang="en">Rugged Tablet</span>
-                                    <span data-lang="cz">Robustní Tablet</span>
-                                </option>
-                                <option value="kiosk">
-                                    <span data-lang="en">Kiosk Terminal</span>
-                                    <span data-lang="cz">Kiosk Terminál</span>
-                                </option>
-                                <option value="other">
-                                    <span data-lang="en">Other</span>
-                                    <span data-lang="cz">Jiné</span>
-                                </option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="requirements" class="block text-sm font-medium text-gray-700 mb-1">
-                                <span data-lang="en">Requirements</span>
-                                <span data-lang="cz">Požadavky</span>
-                            </label>
-                            <textarea id="requirements" name="requirements" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                            <span data-lang="en">Send Request</span>
-                            <span data-lang="cz">Odeslat Žádost</span>
-                        </button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1279,15 +1269,6 @@
             });
         });
 
-        // Form submission handler
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const currentLang = htmlElement.getAttribute('lang') || 'en';
-            const message = currentLang === 'en' 
-                ? 'Thank you for your request! We will contact you within 24 hours with download instructions and support.'
-                : 'Děkujeme za vaši žádost! Budeme vás kontaktovat do 24 hodin s pokyny ke stažení a podporou.';
-            alert(message);
-        });
 
         // Counter animation
         function animateCounters() {
