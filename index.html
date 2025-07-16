@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise WebView Solutions - Barcode Scanning & Logistics Applications</title>
-    <meta name="description" content="Professional Android WebView solutions for enterprise, logistics, and barcode scanning applications. Secure, customizable, and optimized for business-critical operations.">
-    <meta name="keywords" content="enterprise webview, barcode scanning, logistics apps, warehouse management, inventory solutions, mobile enterprise applications">
+    <title data-en="Enterprise WebView Solutions - Barcode Scanning & Logistics Applications" data-cz="Podniková WebView Řešení - Skenování Čárových Kódů a Logistické Aplikace">Enterprise WebView Solutions - Barcode Scanning & Logistics Applications</title>
+    <meta name="description" data-en="Professional Android WebView solutions for enterprise, logistics, and barcode scanning applications. Secure, customizable, and optimized for business-critical operations." data-cz="Profesionální Android WebView řešení pro podniky, logistiku a aplikace pro skenování čárových kódů. Bezpečná, přizpůsobitelná a optimalizovaná pro kritické obchodní operace." content="Professional Android WebView solutions for enterprise, logistics, and barcode scanning applications. Secure, customizable, and optimized for business-critical operations.">
+    <meta name="keywords" data-en="enterprise webview, barcode scanning, logistics apps, warehouse management, inventory solutions, mobile enterprise applications" data-cz="podniková webview, skenování čárových kódů, logistické aplikace, řízení skladu, inventární řešení, mobilní podnikové aplikace" content="enterprise webview, barcode scanning, logistics apps, warehouse management, inventory solutions, mobile enterprise applications">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -50,6 +50,58 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+        .lang-switch {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .lang-switch.active {
+            background: #3b82f6;
+            color: white;
+        }
+        .lang-switch:hover {
+            background: #e5e7eb;
+        }
+        .lang-switch.active:hover {
+            background: #2563eb;
+        }
+        [data-lang]:not([data-lang="en"]) {
+            display: none;
+        }
+        html[lang="cz"] [data-lang="en"] {
+            display: none;
+        }
+        html[lang="cz"] [data-lang="cz"] {
+            display: block;
+        }
+        html[lang="cz"] [data-lang="cz"].inline {
+            display: inline;
+        }
+        html[lang="cz"] [data-lang="cz"].inline-block {
+            display: inline-block;
+        }
+        html[lang="cz"] [data-lang="cz"].flex {
+            display: flex;
+        }
+        html[lang="cz"] [data-lang="cz"].grid {
+            display: grid;
+        }
+        [data-lang="cz"] {
+            display: none;
+        }
+        [data-lang="cz"].inline {
+            display: none;
+        }
+        [data-lang="cz"].inline-block {
+            display: none;
+        }
+        [data-lang="cz"].flex {
+            display: none;
+        }
+        [data-lang="cz"].grid {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -64,11 +116,31 @@
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#solutions" class="text-gray-700 hover:text-blue-600 transition-colors">Solutions</a>
-                    <a href="#industries" class="text-gray-700 hover:text-blue-600 transition-colors">Industries</a>
-                    <a href="#features" class="text-gray-700 hover:text-blue-600 transition-colors">Features</a>
-                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
-                    <a href="#demo" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Request Demo</a>
+                    <a href="#solutions" class="text-gray-700 hover:text-blue-600 transition-colors">
+                        <span data-lang="en">Solutions</span>
+                        <span data-lang="cz">Řešení</span>
+                    </a>
+                    <a href="#industries" class="text-gray-700 hover:text-blue-600 transition-colors">
+                        <span data-lang="en">Industries</span>
+                        <span data-lang="cz">Odvětví</span>
+                    </a>
+                    <a href="#features" class="text-gray-700 hover:text-blue-600 transition-colors">
+                        <span data-lang="en">Features</span>
+                        <span data-lang="cz">Funkce</span>
+                    </a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">
+                        <span data-lang="en">Contact</span>
+                        <span data-lang="cz">Kontakt</span>
+                    </a>
+                    <a href="#demo" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                        <span data-lang="en">Request Demo</span>
+                        <span data-lang="cz">Vyžádat Demo</span>
+                    </a>
+                    <!-- Language Switch -->
+                    <div class="flex items-center space-x-1 ml-4">
+                        <span class="lang-switch active" data-lang-switch="en">EN</span>
+                        <span class="lang-switch" data-lang-switch="cz">CZ</span>
+                    </div>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button class="mobile-menu-button text-gray-700 hover:text-blue-600">
@@ -85,21 +157,28 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                        Enterprise WebView Solutions
-                        <span class="text-blue-200">for Modern Business</span>
+                        <span data-lang="en">Enterprise WebView Solutions</span>
+                        <span data-lang="cz">Podniková WebView Řešení</span>
+                        <br>
+                        <span class="text-blue-200">
+                            <span data-lang="en">for Modern Business</span>
+                            <span data-lang="cz">pro Moderní Podnikání</span>
+                        </span>
                     </h1>
                     <p class="text-xl md:text-2xl mb-8 text-blue-100">
-                        Transform your logistics, warehousing, and inventory operations with our secure, 
-                        barcode-scanning enabled WebView applications. Built for enterprise-scale deployments.
+                        <span data-lang="en">Transform your logistics, warehousing, and inventory operations with our secure, barcode-scanning enabled WebView applications. Built for enterprise-scale deployments.</span>
+                        <span data-lang="cz">Transformujte své logistické, skladové a inventární operace s našimi bezpečnými WebView aplikacemi se skenováním čárových kódů. Postavené pro nasazení v podnikovém měřítku.</span>
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#demo" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">
                             <i class="fas fa-play-circle mr-2"></i>
-                            Request Demo
+                            <span data-lang="en">Request Demo</span>
+                            <span data-lang="cz">Vyžádat Demo</span>
                         </a>
                         <a href="#solutions" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center">
                             <i class="fas fa-info-circle mr-2"></i>
-                            Learn More
+                            <span data-lang="en">Learn More</span>
+                            <span data-lang="cz">Dozvědět se více</span>
                         </a>
                     </div>
                 </div>
@@ -110,19 +189,31 @@
                             <div class="flex justify-center mb-6">
                                 <i class="fas fa-mobile-alt text-6xl text-blue-600"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-gray-900 text-center mb-4">Mobile-First Design</h3>
+                            <h3 class="text-xl font-bold text-gray-900 text-center mb-4">
+                                <span data-lang="en">Mobile-First Design</span>
+                                <span data-lang="cz">Mobilní Design</span>
+                            </h3>
                             <div class="grid grid-cols-3 gap-4 text-center">
                                 <div>
                                     <i class="fas fa-qrcode text-2xl text-blue-600 mb-2"></i>
-                                    <p class="text-sm text-gray-600">QR/Barcode</p>
+                                    <p class="text-sm text-gray-600">
+                                        <span data-lang="en">QR/Barcode</span>
+                                        <span data-lang="cz">QR/Čárový kód</span>
+                                    </p>
                                 </div>
                                 <div>
                                     <i class="fas fa-shield-alt text-2xl text-green-600 mb-2"></i>
-                                    <p class="text-sm text-gray-600">Secure</p>
+                                    <p class="text-sm text-gray-600">
+                                        <span data-lang="en">Secure</span>
+                                        <span data-lang="cz">Bezpečný</span>
+                                    </p>
                                 </div>
                                 <div>
                                     <i class="fas fa-cogs text-2xl text-orange-600 mb-2"></i>
-                                    <p class="text-sm text-gray-600">Customizable</p>
+                                    <p class="text-sm text-gray-600">
+                                        <span data-lang="en">Customizable</span>
+                                        <span data-lang="cz">Přizpůsobitelný</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -138,23 +229,47 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
                 <div class="card-hover p-6">
                     <div class="stats-counter">500+</div>
-                    <p class="text-lg font-semibold text-gray-700">Enterprise Deployments</p>
-                    <p class="text-gray-500">Across logistics & warehousing</p>
+                    <p class="text-lg font-semibold text-gray-700">
+                        <span data-lang="en">Enterprise Deployments</span>
+                        <span data-lang="cz">Podniková Nasazení</span>
+                    </p>
+                    <p class="text-gray-500">
+                        <span data-lang="en">Across logistics & warehousing</span>
+                        <span data-lang="cz">V logistice a skladování</span>
+                    </p>
                 </div>
                 <div class="card-hover p-6">
                     <div class="stats-counter">99.9%</div>
-                    <p class="text-lg font-semibold text-gray-700">Uptime Guarantee</p>
-                    <p class="text-gray-500">Mission-critical reliability</p>
+                    <p class="text-lg font-semibold text-gray-700">
+                        <span data-lang="en">Uptime Guarantee</span>
+                        <span data-lang="cz">Záruka Provozu</span>
+                    </p>
+                    <p class="text-gray-500">
+                        <span data-lang="en">Mission-critical reliability</span>
+                        <span data-lang="cz">Kritická spolehlivost</span>
+                    </p>
                 </div>
                 <div class="card-hover p-6">
                     <div class="stats-counter">50M+</div>
-                    <p class="text-lg font-semibold text-gray-700">Barcodes Scanned</p>
-                    <p class="text-gray-500">Daily processing volume</p>
+                    <p class="text-lg font-semibold text-gray-700">
+                        <span data-lang="en">Barcodes Scanned</span>
+                        <span data-lang="cz">Skenovaných Kódů</span>
+                    </p>
+                    <p class="text-gray-500">
+                        <span data-lang="en">Daily processing volume</span>
+                        <span data-lang="cz">Denní objem zpracování</span>
+                    </p>
                 </div>
                 <div class="card-hover p-6">
                     <div class="stats-counter">24/7</div>
-                    <p class="text-lg font-semibold text-gray-700">Support</p>
-                    <p class="text-gray-500">Enterprise-grade assistance</p>
+                    <p class="text-lg font-semibold text-gray-700">
+                        <span data-lang="en">Support</span>
+                        <span data-lang="cz">Podpora</span>
+                    </p>
+                    <p class="text-gray-500">
+                        <span data-lang="en">Enterprise-grade assistance</span>
+                        <span data-lang="cz">Podniková asistence</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -165,11 +280,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Industry Solutions
+                    <span data-lang="en">Industry Solutions</span>
+                    <span data-lang="cz">Odvětvová Řešení</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Specialized WebView applications designed for specific industry needs, 
-                    with integrated barcode scanning and enterprise-grade security.
+                    <span data-lang="en">Specialized WebView applications designed for specific industry needs, with integrated barcode scanning and enterprise-grade security.</span>
+                    <span data-lang="cz">Specializované WebView aplikace navržené pro specifické potřeby odvětví, s integrovaným skenováním čárových kódů a podnikovou bezpečností.</span>
                 </p>
             </div>
 
@@ -178,23 +294,29 @@
                     <div class="logistics-icon text-4xl mb-4">
                         <i class="fas fa-warehouse"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Logistics & Warehousing</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        <span data-lang="en">Logistics & Warehousing</span>
+                        <span data-lang="cz">Logistika a Skladování</span>
+                    </h3>
                     <p class="text-gray-600 mb-4">
-                        Streamline inventory management, package tracking, and warehouse operations 
-                        with real-time barcode scanning capabilities.
+                        <span data-lang="en">Streamline inventory management, package tracking, and warehouse operations with real-time barcode scanning capabilities.</span>
+                        <span data-lang="cz">Zefektivněte řízení zásob, sledování balíků a skladových operací s real-time skenováním čárových kódů.</span>
                     </p>
                     <ul class="space-y-2 text-sm text-gray-600">
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Real-time inventory tracking
+                            <span data-lang="en">Real-time inventory tracking</span>
+                            <span data-lang="cz">Sledování zásob v reálném čase</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Package sorting automation
+                            <span data-lang="en">Package sorting automation</span>
+                            <span data-lang="cz">Automatizace třídění balíků</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Shipping label generation
+                            <span data-lang="en">Shipping label generation</span>
+                            <span data-lang="cz">Generování přepravních štítků</span>
                         </li>
                     </ul>
                 </div>
@@ -203,23 +325,29 @@
                     <div class="logistics-icon text-4xl mb-4">
                         <i class="fas fa-store"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Retail & Point of Sale</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        <span data-lang="en">Retail & Point of Sale</span>
+                        <span data-lang="cz">Maloobchod a Pokladny</span>
+                    </h3>
                     <p class="text-gray-600 mb-4">
-                        Enhance customer experience with mobile POS systems, price checking, 
-                        and inventory management for retail environments.
+                        <span data-lang="en">Enhance customer experience with mobile POS systems, price checking, and inventory management for retail environments.</span>
+                        <span data-lang="cz">Vylepšete zákaznickou zkušenost s mobilními POS systémy, kontrolou cen a řízením zásob pro maloobchodní prostředí.</span>
                     </p>
                     <ul class="space-y-2 text-sm text-gray-600">
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Mobile POS integration
+                            <span data-lang="en">Mobile POS integration</span>
+                            <span data-lang="cz">Integrace mobilních POS</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Price verification
+                            <span data-lang="en">Price verification</span>
+                            <span data-lang="cz">Ověření cen</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Stock level monitoring
+                            <span data-lang="en">Stock level monitoring</span>
+                            <span data-lang="cz">Monitorování stavu zásob</span>
                         </li>
                     </ul>
                 </div>
@@ -228,23 +356,29 @@
                     <div class="logistics-icon text-4xl mb-4">
                         <i class="fas fa-industry"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Manufacturing</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        <span data-lang="en">Manufacturing</span>
+                        <span data-lang="cz">Výroba</span>
+                    </h3>
                     <p class="text-gray-600 mb-4">
-                        Optimize production workflows with work order tracking, quality control, 
-                        and equipment monitoring through barcode integration.
+                        <span data-lang="en">Optimize production workflows with work order tracking, quality control, and equipment monitoring through barcode integration.</span>
+                        <span data-lang="cz">Optimalizujte výrobní procesy se sledováním pracovních příkazů, kontrolou kvality a monitorováním zařízení prostřednictvím integrace čárových kódů.</span>
                     </p>
                     <ul class="space-y-2 text-sm text-gray-600">
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Production tracking
+                            <span data-lang="en">Production tracking</span>
+                            <span data-lang="cz">Sledování výroby</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Quality assurance
+                            <span data-lang="en">Quality assurance</span>
+                            <span data-lang="cz">Zajištění kvality</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                            Equipment maintenance
+                            <span data-lang="en">Equipment maintenance</span>
+                            <span data-lang="cz">Údržba zařízení</span>
                         </li>
                     </ul>
                 </div>
@@ -257,46 +391,72 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Barcode Scanning Solutions
+                    <span data-lang="en">Barcode Scanning Solutions</span>
+                    <span data-lang="cz">Řešení Skenování Čárových Kódů</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Advanced barcode and QR code scanning capabilities integrated seamlessly 
-                    into custom WebView applications for enterprise workflows.
+                    <span data-lang="en">Advanced barcode and QR code scanning capabilities integrated seamlessly into custom WebView applications for enterprise workflows.</span>
+                    <span data-lang="cz">Pokročilé možnosti skenování čárových kódů a QR kódů bezproblémově integrované do vlastních WebView aplikací pro podnikové pracovní postupy.</span>
                 </p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-6">
-                        Comprehensive Barcode Support
+                        <span data-lang="en">Comprehensive Barcode Support</span>
+                        <span data-lang="cz">Komplexní Podpora Čárových Kódů</span>
                     </h3>
                     <div class="space-y-4">
                         <div class="flex items-start">
                             <i class="fas fa-barcode text-blue-600 text-xl mr-4 mt-1"></i>
                             <div>
-                                <h4 class="font-semibold text-gray-900">Multiple Format Support</h4>
-                                <p class="text-gray-600">QR codes, UPC, EAN, Code 128, Data Matrix, PDF417, and more</p>
+                                <h4 class="font-semibold text-gray-900">
+                                    <span data-lang="en">Multiple Format Support</span>
+                                    <span data-lang="cz">Podpora Různých Formátů</span>
+                                </h4>
+                                <p class="text-gray-600">
+                                    <span data-lang="en">QR codes, UPC, EAN, Code 128, Data Matrix, PDF417, and more</span>
+                                    <span data-lang="cz">QR kódy, UPC, EAN, Code 128, Data Matrix, PDF417 a další</span>
+                                </p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i class="fas fa-camera text-blue-600 text-xl mr-4 mt-1"></i>
                             <div>
-                                <h4 class="font-semibold text-gray-900">Real-time Scanning</h4>
-                                <p class="text-gray-600">Instant recognition with camera integration and batch processing</p>
+                                <h4 class="font-semibold text-gray-900">
+                                    <span data-lang="en">Real-time Scanning</span>
+                                    <span data-lang="cz">Skenování v Reálném Čase</span>
+                                </h4>
+                                <p class="text-gray-600">
+                                    <span data-lang="en">Instant recognition with camera integration and batch processing</span>
+                                    <span data-lang="cz">Okamžité rozpoznání s integrací kamery a dávkovým zpracováním</span>
+                                </p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i class="fas fa-wifi text-blue-600 text-xl mr-4 mt-1"></i>
                             <div>
-                                <h4 class="font-semibold text-gray-900">Offline Capability</h4>
-                                <p class="text-gray-600">Works without internet connection, syncs when online</p>
+                                <h4 class="font-semibold text-gray-900">
+                                    <span data-lang="en">Offline Capability</span>
+                                    <span data-lang="cz">Offline Možnosti</span>
+                                </h4>
+                                <p class="text-gray-600">
+                                    <span data-lang="en">Works without internet connection, syncs when online</span>
+                                    <span data-lang="cz">Funguje bez internetového připojení, synchronizuje při připojení</span>
+                                </p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i class="fas fa-database text-blue-600 text-xl mr-4 mt-1"></i>
                             <div>
-                                <h4 class="font-semibold text-gray-900">ERP Integration</h4>
-                                <p class="text-gray-600">Seamless integration with SAP, Oracle, and other enterprise systems</p>
+                                <h4 class="font-semibold text-gray-900">
+                                    <span data-lang="en">ERP Integration</span>
+                                    <span data-lang="cz">Integrace ERP</span>
+                                </h4>
+                                <p class="text-gray-600">
+                                    <span data-lang="en">Seamless integration with SAP, Oracle, and other enterprise systems</span>
+                                    <span data-lang="cz">Bezproblémová integrace s SAP, Oracle a dalšími podnikovými systémy</span>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -305,24 +465,39 @@
                     <div class="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl">
                         <div class="text-center mb-6">
                             <i class="fas fa-qrcode text-6xl text-blue-600 mb-4"></i>
-                            <h4 class="text-xl font-bold text-gray-900">Scan Performance</h4>
+                            <h4 class="text-xl font-bold text-gray-900">
+                                <span data-lang="en">Scan Performance</span>
+                                <span data-lang="cz">Výkon Skenování</span>
+                            </h4>
                         </div>
                         <div class="grid grid-cols-2 gap-4 text-center">
                             <div class="bg-white p-4 rounded-lg">
                                 <div class="text-2xl font-bold text-blue-600">0.3s</div>
-                                <div class="text-sm text-gray-600">Average scan time</div>
+                                <div class="text-sm text-gray-600">
+                                    <span data-lang="en">Average scan time</span>
+                                    <span data-lang="cz">Průměrný čas skenování</span>
+                                </div>
                             </div>
                             <div class="bg-white p-4 rounded-lg">
                                 <div class="text-2xl font-bold text-green-600">99.8%</div>
-                                <div class="text-sm text-gray-600">Accuracy rate</div>
+                                <div class="text-sm text-gray-600">
+                                    <span data-lang="en">Accuracy rate</span>
+                                    <span data-lang="cz">Přesnost</span>
+                                </div>
                             </div>
                             <div class="bg-white p-4 rounded-lg">
                                 <div class="text-2xl font-bold text-orange-600">1000+</div>
-                                <div class="text-sm text-gray-600">Scans per minute</div>
+                                <div class="text-sm text-gray-600">
+                                    <span data-lang="en">Scans per minute</span>
+                                    <span data-lang="cz">Skenů za minutu</span>
+                                </div>
                             </div>
                             <div class="bg-white p-4 rounded-lg">
                                 <div class="text-2xl font-bold text-purple-600">15+</div>
-                                <div class="text-sm text-gray-600">Barcode formats</div>
+                                <div class="text-sm text-gray-600">
+                                    <span data-lang="en">Barcode formats</span>
+                                    <span data-lang="cz">Formátů čárových kódů</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -336,11 +511,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Enterprise Features
+                    <span data-lang="en">Enterprise Features</span>
+                    <span data-lang="cz">Podnikové Funkce</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Built for mission-critical operations with enterprise-grade security, 
-                    scalability, and management capabilities.
+                    <span data-lang="en">Built for mission-critical operations with enterprise-grade security, scalability, and management capabilities.</span>
+                    <span data-lang="cz">Postavené pro kritické operace s podnikovou bezpečností, škálovatelností a možnostmi správy.</span>
                 </p>
             </div>
 
@@ -349,10 +525,13 @@
                     <div class="feature-icon text-4xl mb-4">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Enterprise Security</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        <span data-lang="en">Enterprise Security</span>
+                        <span data-lang="cz">Podniková Bezpečnost</span>
+                    </h3>
                     <p class="text-gray-600">
-                        Advanced encryption, secure certificate management, and SSO integration 
-                        for complete enterprise security compliance.
+                        <span data-lang="en">Advanced encryption, secure certificate management, and SSO integration for complete enterprise security compliance.</span>
+                        <span data-lang="cz">Pokročilé šifrování, bezpečná správa certifikátů a integrace SSO pro kompletní shodu s podnikovou bezpečností.</span>
                     </p>
                 </div>
 
@@ -360,10 +539,13 @@
                     <div class="feature-icon text-4xl mb-4">
                         <i class="fas fa-users-cog"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Device Management</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        <span data-lang="en">Device Management</span>
+                        <span data-lang="cz">Správa Zařízení</span>
+                    </h3>
                     <p class="text-gray-600">
-                        Centralized device provisioning, remote configuration, and policy 
-                        management for large-scale deployments.
+                        <span data-lang="en">Centralized device provisioning, remote configuration, and policy management for large-scale deployments.</span>
+                        <span data-lang="cz">Centralizované zřizování zařízení, vzdálená konfigurace a správa politik pro rozsáhlá nasazení.</span>
                     </p>
                 </div>
 
@@ -371,10 +553,13 @@
                     <div class="feature-icon text-4xl mb-4">
                         <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Analytics & Reporting</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        <span data-lang="en">Analytics & Reporting</span>
+                        <span data-lang="cz">Analýzy a Reportování</span>
+                    </h3>
                     <p class="text-gray-600">
-                        Comprehensive usage analytics, performance monitoring, and customizable 
-                        reporting dashboards for business insights.
+                        <span data-lang="en">Comprehensive usage analytics, performance monitoring, and customizable reporting dashboards for business insights.</span>
+                        <span data-lang="cz">Komplexní analýzy používání, monitorování výkonu a přizpůsobitelné reportovací panely pro obchodní poznatky.</span>
                     </p>
                 </div>
 
@@ -382,10 +567,13 @@
                     <div class="feature-icon text-4xl mb-4">
                         <i class="fas fa-sync-alt"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Real-time Sync</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        <span data-lang="en">Real-time Sync</span>
+                        <span data-lang="cz">Synchronizace v Reálném Čase</span>
+                    </h3>
                     <p class="text-gray-600">
-                        Instant data synchronization across devices and systems with 
-                        conflict resolution and offline support.
+                        <span data-lang="en">Instant data synchronization across devices and systems with conflict resolution and offline support.</span>
+                        <span data-lang="cz">Okamžitá synchronizace dat napříč zařízeními a systémy s řešením konfliktů a offline podporou.</span>
                     </p>
                 </div>
 
@@ -393,10 +581,13 @@
                     <div class="feature-icon text-4xl mb-4">
                         <i class="fas fa-plug"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">API Integration</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        <span data-lang="en">API Integration</span>
+                        <span data-lang="cz">Integrace API</span>
+                    </h3>
                     <p class="text-gray-600">
-                        Seamless integration with existing enterprise systems through 
-                        RESTful APIs and webhook support.
+                        <span data-lang="en">Seamless integration with existing enterprise systems through RESTful APIs and webhook support.</span>
+                        <span data-lang="cz">Bezproblémová integrace s existujícími podnikovými systémy prostřednictvím RESTful API a podpory webhooků.</span>
                     </p>
                 </div>
 
@@ -404,10 +595,13 @@
                     <div class="feature-icon text-4xl mb-4">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Customization</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">
+                        <span data-lang="en">Customization</span>
+                        <span data-lang="cz">Přizpůsobení</span>
+                    </h3>
                     <p class="text-gray-600">
-                        Fully customizable UI, workflows, and business logic to match 
-                        your specific enterprise requirements.
+                        <span data-lang="en">Fully customizable UI, workflows, and business logic to match your specific enterprise requirements.</span>
+                        <span data-lang="cz">Plně přizpůsobitelné UI, pracovní postupy a obchodní logiku pro splnění vašich specifických podnikových požadavků.</span>
                     </p>
                 </div>
             </div>
@@ -418,20 +612,23 @@
     <section class="py-20 industry-bg text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Transform Your Operations?
+                <span data-lang="en">Ready to Transform Your Operations?</span>
+                <span data-lang="cz">Připraveni Transformovat Vaše Operace?</span>
             </h2>
             <p class="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-                Join hundreds of enterprises that trust our barcode scanning solutions 
-                for their mission-critical operations. Get started with a custom demo today.
+                <span data-lang="en">Join hundreds of enterprises that trust our barcode scanning solutions for their mission-critical operations. Get started with a custom demo today.</span>
+                <span data-lang="cz">Připojte se ke stovkám podniků, které důvěřují našim řešením skenování čárových kódů pro své kritické operace. Začněte s vlastním demem ještě dnes.</span>
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#contact" class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">
                     <i class="fas fa-calendar-check mr-2"></i>
-                    Schedule Demo
+                    <span data-lang="en">Schedule Demo</span>
+                    <span data-lang="cz">Naplánovat Demo</span>
                 </a>
                 <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">
                     <i class="fas fa-phone mr-2"></i>
-                    Contact Sales
+                    <span data-lang="en">Contact Sales</span>
+                    <span data-lang="cz">Kontaktovat Prodej</span>
                 </a>
             </div>
         </div>
@@ -442,26 +639,36 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Get in Touch
+                    <span data-lang="en">Get in Touch</span>
+                    <span data-lang="cz">Kontaktujte Nás</span>
                 </h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Ready to discuss your enterprise barcode scanning needs? Our team is here 
-                    to help you implement the perfect solution for your business.
+                    <span data-lang="en">Ready to discuss your enterprise barcode scanning needs? Our team is here to help you implement the perfect solution for your business.</span>
+                    <span data-lang="cz">Připraveni diskutovat o vašich podnikových potřebách skenování čárových kódů? Náš tým je zde, aby vám pomohl implementovat perfektní řešení pro váš podnik.</span>
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Enterprise Sales</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                        <span data-lang="en">Enterprise Sales</span>
+                        <span data-lang="cz">Podnikový Prodej</span>
+                    </h3>
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <div class="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
                                 <i class="fas fa-envelope text-white"></i>
                             </div>
                             <div class="ml-4">
-                                <h4 class="font-semibold text-gray-900">Enterprise Sales</h4>
+                                <h4 class="font-semibold text-gray-900">
+                                    <span data-lang="en">Enterprise Sales</span>
+                                    <span data-lang="cz">Podnikový Prodej</span>
+                                </h4>
                                 <a href="mailto:enterprise@mdoom.com" class="text-blue-600 hover:underline">enterprise@mdoom.com</a>
-                                <p class="text-gray-600 text-sm mt-1">For volume licensing and custom solutions</p>
+                                <p class="text-gray-600 text-sm mt-1">
+                                    <span data-lang="en">For volume licensing and custom solutions</span>
+                                    <span data-lang="cz">Pro objemové licence a vlastní řešení</span>
+                                </p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -469,9 +676,18 @@
                                 <i class="fas fa-phone text-white"></i>
                             </div>
                             <div class="ml-4">
-                                <h4 class="font-semibold text-gray-900">Direct Sales Line</h4>
-                                <a href="tel:+1-555-MDOOM-ENT" class="text-green-600 hover:underline">+1 (555) MDOOM-ENT</a>
-                                <p class="text-gray-600 text-sm mt-1">Monday - Friday, 8AM - 6PM EST</p>
+                                <h4 class="font-semibold text-gray-900">
+                                    <span data-lang="en">Direct Sales Line</span>
+                                    <span data-lang="cz">Přímá Prodejní Linka</span>
+                                </h4>
+                                <a href="tel:+420-555-MDOOM" class="text-green-600 hover:underline">
+                                    <span data-lang="en">+1 (555) MDOOM-ENT</span>
+                                    <span data-lang="cz">+420 555 MDOOM</span>
+                                </a>
+                                <p class="text-gray-600 text-sm mt-1">
+                                    <span data-lang="en">Monday - Friday, 8AM - 6PM EST</span>
+                                    <span data-lang="cz">Pondělí - Pátek, 8:00 - 18:00</span>
+                                </p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -479,63 +695,133 @@
                                 <i class="fas fa-headset text-white"></i>
                             </div>
                             <div class="ml-4">
-                                <h4 class="font-semibold text-gray-900">Technical Support</h4>
+                                <h4 class="font-semibold text-gray-900">
+                                    <span data-lang="en">Technical Support</span>
+                                    <span data-lang="cz">Technická Podpora</span>
+                                </h4>
                                 <a href="mailto:support@mdoom.com" class="text-purple-600 hover:underline">support@mdoom.com</a>
-                                <p class="text-gray-600 text-sm mt-1">24/7 enterprise support available</p>
+                                <p class="text-gray-600 text-sm mt-1">
+                                    <span data-lang="en">24/7 enterprise support available</span>
+                                    <span data-lang="cz">24/7 podniková podpora k dispozici</span>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white p-8 rounded-xl shadow-lg">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Request Enterprise Demo</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                        <span data-lang="en">Request Enterprise Demo</span>
+                        <span data-lang="cz">Vyžádat Podnikové Demo</span>
+                    </h3>
                     <form id="demo-form" class="space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
-                                <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">
+                                    <span data-lang="en">First Name</span>
+                                    <span data-lang="cz">Jméno</span>
+                                </label>
                                 <input type="text" id="first-name" name="first-name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             </div>
                             <div>
-                                <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">
+                                    <span data-lang="en">Last Name</span>
+                                    <span data-lang="cz">Příjmení</span>
+                                </label>
                                 <input type="text" id="last-name" name="last-name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             </div>
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Business Email</label>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                                <span data-lang="en">Business Email</span>
+                                <span data-lang="cz">Obchodní Email</span>
+                            </label>
                             <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                         <div>
-                            <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                            <label for="company" class="block text-sm font-medium text-gray-700 mb-1">
+                                <span data-lang="en">Company</span>
+                                <span data-lang="cz">Společnost</span>
+                            </label>
                             <input type="text" id="company" name="company" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                         <div>
-                            <label for="industry" class="block text-sm font-medium text-gray-700 mb-1">Industry</label>
+                            <label for="industry" class="block text-sm font-medium text-gray-700 mb-1">
+                                <span data-lang="en">Industry</span>
+                                <span data-lang="cz">Odvětví</span>
+                            </label>
                             <select id="industry" name="industry" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                                <option value="">Select your industry</option>
-                                <option value="logistics">Logistics & Warehousing</option>
-                                <option value="retail">Retail & E-commerce</option>
-                                <option value="manufacturing">Manufacturing</option>
-                                <option value="healthcare">Healthcare</option>
-                                <option value="automotive">Automotive</option>
-                                <option value="other">Other</option>
+                                <option value="">
+                                    <span data-lang="en">Select your industry</span>
+                                    <span data-lang="cz">Vyberte své odvětví</span>
+                                </option>
+                                <option value="logistics">
+                                    <span data-lang="en">Logistics & Warehousing</span>
+                                    <span data-lang="cz">Logistika a Skladování</span>
+                                </option>
+                                <option value="retail">
+                                    <span data-lang="en">Retail & E-commerce</span>
+                                    <span data-lang="cz">Maloobchod a E-commerce</span>
+                                </option>
+                                <option value="manufacturing">
+                                    <span data-lang="en">Manufacturing</span>
+                                    <span data-lang="cz">Výroba</span>
+                                </option>
+                                <option value="healthcare">
+                                    <span data-lang="en">Healthcare</span>
+                                    <span data-lang="cz">Zdravotnictví</span>
+                                </option>
+                                <option value="automotive">
+                                    <span data-lang="en">Automotive</span>
+                                    <span data-lang="cz">Automobilový průmysl</span>
+                                </option>
+                                <option value="other">
+                                    <span data-lang="en">Other</span>
+                                    <span data-lang="cz">Jiné</span>
+                                </option>
                             </select>
                         </div>
                         <div>
-                            <label for="employees" class="block text-sm font-medium text-gray-700 mb-1">Company Size</label>
+                            <label for="employees" class="block text-sm font-medium text-gray-700 mb-1">
+                                <span data-lang="en">Company Size</span>
+                                <span data-lang="cz">Velikost Společnosti</span>
+                            </label>
                             <select id="employees" name="employees" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                                <option value="">Select company size</option>
-                                <option value="1-50">1-50 employees</option>
-                                <option value="51-200">51-200 employees</option>
-                                <option value="201-1000">201-1000 employees</option>
-                                <option value="1000+">1000+ employees</option>
+                                <option value="">
+                                    <span data-lang="en">Select company size</span>
+                                    <span data-lang="cz">Vyberte velikost společnosti</span>
+                                </option>
+                                <option value="1-50">
+                                    <span data-lang="en">1-50 employees</span>
+                                    <span data-lang="cz">1-50 zaměstnanců</span>
+                                </option>
+                                <option value="51-200">
+                                    <span data-lang="en">51-200 employees</span>
+                                    <span data-lang="cz">51-200 zaměstnanců</span>
+                                </option>
+                                <option value="201-1000">
+                                    <span data-lang="en">201-1000 employees</span>
+                                    <span data-lang="cz">201-1000 zaměstnanců</span>
+                                </option>
+                                <option value="1000+">
+                                    <span data-lang="en">1000+ employees</span>
+                                    <span data-lang="cz">1000+ zaměstnanců</span>
+                                </option>
                             </select>
                         </div>
                         <div>
-                            <label for="use-case" class="block text-sm font-medium text-gray-700 mb-1">Use Case</label>
-                            <textarea id="use-case" name="use-case" rows="4" placeholder="Tell us about your barcode scanning needs..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                            <label for="use-case" class="block text-sm font-medium text-gray-700 mb-1">
+                                <span data-lang="en">Use Case</span>
+                                <span data-lang="cz">Případ Použití</span>
+                            </label>
+                            <textarea id="use-case" name="use-case" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <span data-lang="en" placeholder="Tell us about your barcode scanning needs..."></span>
+                                <span data-lang="cz" placeholder="Řekněte nám o vašich potřebách skenování čárových kódů..."></span>
+                            </textarea>
                         </div>
                         <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                            Request Enterprise Demo
+                            <span data-lang="en">Request Enterprise Demo</span>
+                            <span data-lang="cz">Vyžádat Podnikové Demo</span>
                         </button>
                     </form>
                 </div>
@@ -553,44 +839,144 @@
                         <span class="text-xl font-bold">MDoom Enterprise</span>
                     </div>
                     <p class="text-gray-400">
-                        Enterprise barcode scanning solutions for modern businesses.
+                        <span data-lang="en">Enterprise barcode scanning solutions for modern businesses.</span>
+                        <span data-lang="cz">Podniková řešení skenování čárových kódů pro moderní podniky.</span>
                     </p>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Solutions</h4>
+                    <h4 class="font-semibold mb-4">
+                        <span data-lang="en">Solutions</span>
+                        <span data-lang="cz">Řešení</span>
+                    </h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#solutions" class="hover:text-white transition-colors">Barcode Scanning</a></li>
-                        <li><a href="#industries" class="hover:text-white transition-colors">Industry Solutions</a></li>
-                        <li><a href="#features" class="hover:text-white transition-colors">Enterprise Features</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-colors">Custom Development</a></li>
+                        <li><a href="#solutions" class="hover:text-white transition-colors">
+                            <span data-lang="en">Barcode Scanning</span>
+                            <span data-lang="cz">Skenování Čárových Kódů</span>
+                        </a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">
+                            <span data-lang="en">Industry Solutions</span>
+                            <span data-lang="cz">Odvětvová Řešení</span>
+                        </a></li>
+                        <li><a href="#features" class="hover:text-white transition-colors">
+                            <span data-lang="en">Enterprise Features</span>
+                            <span data-lang="cz">Podnikové Funkce</span>
+                        </a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">
+                            <span data-lang="en">Custom Development</span>
+                            <span data-lang="cz">Vlastní Vývoj</span>
+                        </a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Industries</h4>
+                    <h4 class="font-semibold mb-4">
+                        <span data-lang="en">Industries</span>
+                        <span data-lang="cz">Odvětví</span>
+                    </h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#industries" class="hover:text-white transition-colors">Logistics & Warehousing</a></li>
-                        <li><a href="#industries" class="hover:text-white transition-colors">Retail & POS</a></li>
-                        <li><a href="#industries" class="hover:text-white transition-colors">Manufacturing</a></li>
-                        <li><a href="#industries" class="hover:text-white transition-colors">Healthcare</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">
+                            <span data-lang="en">Logistics & Warehousing</span>
+                            <span data-lang="cz">Logistika a Skladování</span>
+                        </a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">
+                            <span data-lang="en">Retail & POS</span>
+                            <span data-lang="cz">Maloobchod a POS</span>
+                        </a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">
+                            <span data-lang="en">Manufacturing</span>
+                            <span data-lang="cz">Výroba</span>
+                        </a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">
+                            <span data-lang="en">Healthcare</span>
+                            <span data-lang="cz">Zdravotnictví</span>
+                        </a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Support</h4>
+                    <h4 class="font-semibold mb-4">
+                        <span data-lang="en">Support</span>
+                        <span data-lang="cz">Podpora</span>
+                    </h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#contact" class="hover:text-white transition-colors">Contact Sales</a></li>
-                        <li><a href="/documentation.html" class="hover:text-white transition-colors">Documentation</a></li>
-                        <li><a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="mailto:support@mdoom.com" class="hover:text-white transition-colors">Technical Support</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">
+                            <span data-lang="en">Contact Sales</span>
+                            <span data-lang="cz">Kontaktovat Prodej</span>
+                        </a></li>
+                        <li><a href="/documentation.html" class="hover:text-white transition-colors">
+                            <span data-lang="en">Documentation</span>
+                            <span data-lang="cz">Dokumentace</span>
+                        </a></li>
+                        <li><a href="/privacy.html" class="hover:text-white transition-colors">
+                            <span data-lang="en">Privacy Policy</span>
+                            <span data-lang="cz">Ochrana Soukromí</span>
+                        </a></li>
+                        <li><a href="mailto:support@mdoom.com" class="hover:text-white transition-colors">
+                            <span data-lang="en">Technical Support</span>
+                            <span data-lang="cz">Technická Podpora</span>
+                        </a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 MDoom Enterprise Solutions. All rights reserved.</p>
+                <p>
+                    <span data-lang="en">&copy; 2024 MDoom Enterprise Solutions. All rights reserved.</span>
+                    <span data-lang="cz">&copy; 2024 MDoom Enterprise Solutions. Všechna práva vyhrazena.</span>
+                </p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Language switching functionality
+        const langSwitchers = document.querySelectorAll('[data-lang-switch]');
+        const htmlElement = document.documentElement;
+        
+        function switchLanguage(lang) {
+            htmlElement.setAttribute('lang', lang);
+            localStorage.setItem('preferred-language', lang);
+            
+            // Update active language switcher
+            langSwitchers.forEach(switcher => {
+                switcher.classList.remove('active');
+                if (switcher.getAttribute('data-lang-switch') === lang) {
+                    switcher.classList.add('active');
+                }
+            });
+            
+            // Update meta tags
+            const title = document.querySelector('title');
+            const metaDescription = document.querySelector('meta[name="description"]');
+            const metaKeywords = document.querySelector('meta[name="keywords"]');
+            
+            if (title.hasAttribute('data-' + lang)) {
+                title.textContent = title.getAttribute('data-' + lang);
+            }
+            if (metaDescription.hasAttribute('data-' + lang)) {
+                metaDescription.setAttribute('content', metaDescription.getAttribute('data-' + lang));
+            }
+            if (metaKeywords.hasAttribute('data-' + lang)) {
+                metaKeywords.setAttribute('content', metaKeywords.getAttribute('data-' + lang));
+            }
+            
+            // Update form placeholders
+            const textarea = document.querySelector('#use-case');
+            if (textarea) {
+                const placeholder = lang === 'en' ? 'Tell us about your barcode scanning needs...' : 'Řekněte nám o vašich potřebách skenování čárových kódů...';
+                textarea.setAttribute('placeholder', placeholder);
+            }
+        }
+        
+        // Initialize language switchers
+        langSwitchers.forEach(switcher => {
+            switcher.addEventListener('click', () => {
+                const lang = switcher.getAttribute('data-lang-switch');
+                switchLanguage(lang);
+            });
+        });
+        
+        // Load preferred language from localStorage
+        const preferredLang = localStorage.getItem('preferred-language') || 'en';
+        switchLanguage(preferredLang);
+        
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -612,7 +998,11 @@
         // Form submission handler
         document.getElementById('demo-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your interest! Our enterprise team will contact you within 24 hours to schedule your demo.');
+            const currentLang = htmlElement.getAttribute('lang') || 'en';
+            const message = currentLang === 'en' 
+                ? 'Thank you for your interest! Our enterprise team will contact you within 24 hours to schedule your demo.'
+                : 'Děkujeme za váš zájem! Náš podnikový tým vás bude kontaktovat do 24 hodin pro naplánování vašeho dema.';
+            alert(message);
         });
 
         // Counter animation
