@@ -3,24 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MDWebView - Secure Mobile Web Browser for Business</title>
-    <meta name="description" content="MDWebView is a professional, secure Android web browser designed for businesses. Features include privacy controls, customizable settings, and enterprise-ready security.">
-    <meta name="keywords" content="android browser, business web browser, secure browser, mobile browser, enterprise browser">
+    <title>Enterprise WebView Solutions - Barcode Scanning & Logistics Applications</title>
+    <meta name="description" content="Professional Android WebView solutions for enterprise, logistics, and barcode scanning applications. Secure, customizable, and optimized for business-critical operations.">
+    <meta name="keywords" content="enterprise webview, barcode scanning, logistics apps, warehouse management, inventory solutions, mobile enterprise applications">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
         }
         .card-hover {
             transition: all 0.3s ease;
         }
         .card-hover:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
         .feature-icon {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .industry-bg {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        }
+        .stats-counter {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #1e3a8a;
+        }
+        .barcode-pattern {
+            background-image: repeating-linear-gradient(
+                90deg,
+                #000 0px,
+                #000 2px,
+                transparent 2px,
+                transparent 4px
+            );
+            height: 60px;
+            opacity: 0.1;
+        }
+        .logistics-icon {
+            background: linear-gradient(135deg, #dc2626 0%, #f59e0b 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -34,16 +59,21 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <i class="fas fa-mobile-alt text-2xl text-indigo-600 mr-2"></i>
-                        <span class="text-xl font-bold text-gray-900">MDWebView</span>
+                        <i class="fas fa-qrcode text-2xl text-blue-600 mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">MDoom Enterprise</span>
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="text-gray-700 hover:text-indigo-600 transition-colors">Features</a>
-                    <a href="#security" class="text-gray-700 hover:text-indigo-600 transition-colors">Security</a>
-                    <a href="#pricing" class="text-gray-700 hover:text-indigo-600 transition-colors">Pricing</a>
-                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition-colors">Contact</a>
-                    <a href="#download" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">Download</a>
+                    <a href="#solutions" class="text-gray-700 hover:text-blue-600 transition-colors">Solutions</a>
+                    <a href="#industries" class="text-gray-700 hover:text-blue-600 transition-colors">Industries</a>
+                    <a href="#features" class="text-gray-700 hover:text-blue-600 transition-colors">Features</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+                    <a href="#demo" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Request Demo</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -52,278 +82,356 @@
     <!-- Hero Section -->
     <section class="gradient-bg text-white pt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                    Secure Mobile Browsing<br>
-                    <span class="text-indigo-200">for Your Business</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">
-                    MDWebView is a professional Android web browser designed with privacy and security in mind. Perfect for businesses that need controlled, secure web access.
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        Enterprise WebView Solutions
+                        <span class="text-blue-200">for Modern Business</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-blue-100">
+                        Transform your logistics, warehousing, and inventory operations with our secure, 
+                        barcode-scanning enabled WebView applications. Built for enterprise-scale deployments.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#demo" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">
+                            <i class="fas fa-play-circle mr-2"></i>
+                            Request Demo
+                        </a>
+                        <a href="#solutions" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white rounded-xl shadow-2xl p-8 relative overflow-hidden">
+                        <div class="barcode-pattern absolute top-0 left-0 right-0"></div>
+                        <div class="relative z-10">
+                            <div class="flex justify-center mb-6">
+                                <i class="fas fa-mobile-alt text-6xl text-blue-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 text-center mb-4">Mobile-First Design</h3>
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <i class="fas fa-qrcode text-2xl text-blue-600 mb-2"></i>
+                                    <p class="text-sm text-gray-600">QR/Barcode</p>
+                                </div>
+                                <div>
+                                    <i class="fas fa-shield-alt text-2xl text-green-600 mb-2"></i>
+                                    <p class="text-sm text-gray-600">Secure</p>
+                                </div>
+                                <div>
+                                    <i class="fas fa-cogs text-2xl text-orange-600 mb-2"></i>
+                                    <p class="text-sm text-gray-600">Customizable</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="card-hover p-6">
+                    <div class="stats-counter">500+</div>
+                    <p class="text-lg font-semibold text-gray-700">Enterprise Deployments</p>
+                    <p class="text-gray-500">Across logistics & warehousing</p>
+                </div>
+                <div class="card-hover p-6">
+                    <div class="stats-counter">99.9%</div>
+                    <p class="text-lg font-semibold text-gray-700">Uptime Guarantee</p>
+                    <p class="text-gray-500">Mission-critical reliability</p>
+                </div>
+                <div class="card-hover p-6">
+                    <div class="stats-counter">50M+</div>
+                    <p class="text-lg font-semibold text-gray-700">Barcodes Scanned</p>
+                    <p class="text-gray-500">Daily processing volume</p>
+                </div>
+                <div class="card-hover p-6">
+                    <div class="stats-counter">24/7</div>
+                    <p class="text-lg font-semibold text-gray-700">Support</p>
+                    <p class="text-gray-500">Enterprise-grade assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Industry Solutions
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Specialized WebView applications designed for specific industry needs, 
+                    with integrated barcode scanning and enterprise-grade security.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#download" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                        Download Now
-                    </a>
-                    <a href="#features" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
-                        Learn More
-                    </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="logistics-icon text-4xl mb-4">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Logistics & Warehousing</h3>
+                    <p class="text-gray-600 mb-4">
+                        Streamline inventory management, package tracking, and warehouse operations 
+                        with real-time barcode scanning capabilities.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Real-time inventory tracking
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Package sorting automation
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Shipping label generation
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="logistics-icon text-4xl mb-4">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Retail & Point of Sale</h3>
+                    <p class="text-gray-600 mb-4">
+                        Enhance customer experience with mobile POS systems, price checking, 
+                        and inventory management for retail environments.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Mobile POS integration
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Price verification
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Stock level monitoring
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                    <div class="logistics-icon text-4xl mb-4">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Manufacturing</h3>
+                    <p class="text-gray-600 mb-4">
+                        Optimize production workflows with work order tracking, quality control, 
+                        and equipment monitoring through barcode integration.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Production tracking
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Quality assurance
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Equipment maintenance
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Barcode Scanning Solutions
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Advanced barcode and QR code scanning capabilities integrated seamlessly 
+                    into custom WebView applications for enterprise workflows.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                        Comprehensive Barcode Support
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-barcode text-blue-600 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Multiple Format Support</h4>
+                                <p class="text-gray-600">QR codes, UPC, EAN, Code 128, Data Matrix, PDF417, and more</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-camera text-blue-600 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Real-time Scanning</h4>
+                                <p class="text-gray-600">Instant recognition with camera integration and batch processing</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-wifi text-blue-600 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Offline Capability</h4>
+                                <p class="text-gray-600">Works without internet connection, syncs when online</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-database text-blue-600 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">ERP Integration</h4>
+                                <p class="text-gray-600">Seamless integration with SAP, Oracle, and other enterprise systems</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-qrcode text-6xl text-blue-600 mb-4"></i>
+                            <h4 class="text-xl font-bold text-gray-900">Scan Performance</h4>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div class="bg-white p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-blue-600">0.3s</div>
+                                <div class="text-sm text-gray-600">Average scan time</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-green-600">99.8%</div>
+                                <div class="text-sm text-gray-600">Accuracy rate</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-orange-600">1000+</div>
+                                <div class="text-sm text-gray-600">Scans per minute</div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-purple-600">15+</div>
+                                <div class="text-sm text-gray-600">Barcode formats</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 bg-white">
+    <section id="features" class="py-20 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Built for Business
+                    Enterprise Features
                 </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    MDWebView offers enterprise-grade features while maintaining simplicity and ease of use.
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Built for mission-critical operations with enterprise-grade security, 
+                    scalability, and management capabilities.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
                     <div class="feature-icon text-4xl mb-4">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Privacy First</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Enterprise Security</h3>
                     <p class="text-gray-600">
-                        No data collection by the app itself. All settings stored locally on device using secure SharedPreferences.
+                        Advanced encryption, secure certificate management, and SSO integration 
+                        for complete enterprise security compliance.
                     </p>
                 </div>
 
-                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
                     <div class="feature-icon text-4xl mb-4">
-                        <i class="fas fa-cogs"></i>
+                        <i class="fas fa-users-cog"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Customizable Settings</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Device Management</h3>
                     <p class="text-gray-600">
-                        Configure home page, zoom preferences, cookie management, and screen rotation to suit your business needs.
+                        Centralized device provisioning, remote configuration, and policy 
+                        management for large-scale deployments.
                     </p>
                 </div>
 
-                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
                     <div class="feature-icon text-4xl mb-4">
-                        <i class="fas fa-cookie-bite"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Cookie Management</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Analytics & Reporting</h3>
                     <p class="text-gray-600">
-                        Advanced cookie controls with options for all cookies, third-party cookies, and complete cookie blocking.
+                        Comprehensive usage analytics, performance monitoring, and customizable 
+                        reporting dashboards for business insights.
                     </p>
                 </div>
 
-                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
                     <div class="feature-icon text-4xl mb-4">
-                        <i class="fas fa-lock"></i>
+                        <i class="fas fa-sync-alt"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Password Protection</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Real-time Sync</h3>
                     <p class="text-gray-600">
-                        Secure your browser settings with password protection to prevent unauthorized configuration changes.
+                        Instant data synchronization across devices and systems with 
+                        conflict resolution and offline support.
                     </p>
                 </div>
 
-                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
                     <div class="feature-icon text-4xl mb-4">
-                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-plug"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Dark Mode</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">API Integration</h3>
                     <p class="text-gray-600">
-                        Built-in dark mode for comfortable browsing in low-light environments and reduced eye strain.
+                        Seamless integration with existing enterprise systems through 
+                        RESTful APIs and webhook support.
                     </p>
                 </div>
 
-                <div class="card-hover bg-gray-50 p-8 rounded-xl">
+                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
                     <div class="feature-icon text-4xl mb-4">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-tools"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Mobile Optimized</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Customization</h3>
                     <p class="text-gray-600">
-                        Lightweight and fast Android browser optimized for mobile devices with intuitive touch controls.
+                        Fully customizable UI, workflows, and business logic to match 
+                        your specific enterprise requirements.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Security Section -->
-    <section id="security" class="py-20 bg-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                        Enterprise-Grade Security
-                    </h2>
-                    <p class="text-lg text-gray-600 mb-8">
-                        MDWebView is designed with security as a top priority. Our minimalist approach means fewer attack vectors and better protection for your business.
-                    </p>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 text-xl mr-3 mt-1"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">No Data Collection</h4>
-                                <p class="text-gray-600">App doesn't collect, store, or transmit any personal data</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 text-xl mr-3 mt-1"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Local Storage Only</h4>
-                                <p class="text-gray-600">All settings stored locally using secure SharedPreferences</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 text-xl mr-3 mt-1"></i>
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Cookie Control</h4>
-                                <p class="text-gray-600">Advanced cookie management with granular controls</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-shield-alt text-6xl text-indigo-600 mb-4"></i>
-                        <h3 class="text-2xl font-bold text-gray-900">Privacy by Design</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-600">
-                        <li class="flex items-center">
-                            <i class="fas fa-dot-circle text-indigo-600 mr-3"></i>
-                            No tracking or analytics
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-dot-circle text-indigo-600 mr-3"></i>
-                            No network requests from app
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-dot-circle text-indigo-600 mr-3"></i>
-                            No third-party integrations
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-dot-circle text-indigo-600 mr-3"></i>
-                            Open source transparency
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Simple, Transparent Pricing
-                </h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Choose the plan that fits your business needs. All plans include our core security features.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-8 rounded-xl">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Personal</h3>
-                    <div class="text-3xl font-bold text-gray-900 mb-2">Free</div>
-                    <p class="text-gray-600 mb-6">For individual users</p>
-                    <ul class="space-y-3 text-gray-600 mb-8">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Basic browser features
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Privacy controls
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Cookie management
-                        </li>
-                    </ul>
-                    <button class="w-full bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
-                        Download Free
-                    </button>
-                </div>
-
-                <div class="bg-indigo-600 text-white p-8 rounded-xl transform scale-105 shadow-xl">
-                    <div class="text-center mb-4">
-                        <span class="bg-white text-indigo-600 px-3 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Business</h3>
-                    <div class="text-3xl font-bold mb-2">$9.99</div>
-                    <p class="text-indigo-200 mb-6">per device/month</p>
-                    <ul class="space-y-3 text-indigo-100 mb-8">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-white mr-3"></i>
-                            All Personal features
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-white mr-3"></i>
-                            Password protection
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-white mr-3"></i>
-                            Priority support
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-white mr-3"></i>
-                            Enterprise configuration
-                        </li>
-                    </ul>
-                    <button class="w-full bg-white text-indigo-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                        Start Free Trial
-                    </button>
-                </div>
-
-                <div class="bg-gray-50 p-8 rounded-xl">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Enterprise</h3>
-                    <div class="text-3xl font-bold text-gray-900 mb-2">Custom</div>
-                    <p class="text-gray-600 mb-6">For large organizations</p>
-                    <ul class="space-y-3 text-gray-600 mb-8">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            All Business features
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Volume discounts
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            Custom deployment
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-3"></i>
-                            24/7 support
-                        </li>
-                    </ul>
-                    <button class="w-full bg-gray-200 text-gray-700 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
-                        Contact Sales
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="download" class="py-20 gradient-bg text-white">
+    <!-- CTA Section -->
+    <section class="py-20 industry-bg text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Get Started?
+                Ready to Transform Your Operations?
             </h2>
-            <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
-                Download MDWebView today and experience secure, private browsing for your business.
+            <p class="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+                Join hundreds of enterprises that trust our barcode scanning solutions 
+                for their mission-critical operations. Get started with a custom demo today.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#" class="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">
-                    <i class="fab fa-google-play mr-2"></i>
-                    Download from Google Play
+                <a href="#contact" class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">
+                    <i class="fas fa-calendar-check mr-2"></i>
+                    Schedule Demo
                 </a>
-                <a href="#" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-flex items-center">
-                    <i class="fas fa-download mr-2"></i>
-                    Direct APK Download
+                <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    Contact Sales
                 </a>
             </div>
         </div>
@@ -337,59 +445,97 @@
                     Get in Touch
                 </h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Have questions about MDWebView? We're here to help you get the most out of our secure browser.
+                    Ready to discuss your enterprise barcode scanning needs? Our team is here 
+                    to help you implement the perfect solution for your business.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope text-indigo-600 text-xl mr-4"></i>
-                            <div>
-                                <p class="font-semibold text-gray-900">Email</p>
-                                <a href="mailto:mdoom2@gmail.com" class="text-indigo-600 hover:underline">mdoom2@gmail.com</a>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Enterprise Sales</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-900">Enterprise Sales</h4>
+                                <a href="mailto:enterprise@mdoom.com" class="text-blue-600 hover:underline">enterprise@mdoom.com</a>
+                                <p class="text-gray-600 text-sm mt-1">For volume licensing and custom solutions</p>
                             </div>
                         </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-clock text-indigo-600 text-xl mr-4"></i>
-                            <div>
-                                <p class="font-semibold text-gray-900">Support Hours</p>
-                                <p class="text-gray-600">Monday - Friday, 9AM - 6PM EST</p>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-900">Direct Sales Line</h4>
+                                <a href="tel:+1-555-MDOOM-ENT" class="text-green-600 hover:underline">+1 (555) MDOOM-ENT</a>
+                                <p class="text-gray-600 text-sm mt-1">Monday - Friday, 8AM - 6PM EST</p>
                             </div>
                         </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-life-ring text-indigo-600 text-xl mr-4"></i>
-                            <div>
-                                <p class="font-semibold text-gray-900">Response Time</p>
-                                <p class="text-gray-600">Within 24 hours</p>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-headset text-white"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-900">Technical Support</h4>
+                                <a href="mailto:support@mdoom.com" class="text-purple-600 hover:underline">support@mdoom.com</a>
+                                <p class="text-gray-600 text-sm mt-1">24/7 enterprise support available</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white p-8 rounded-xl shadow-lg">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
-                    <form class="space-y-4">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Request Enterprise Demo</h3>
+                    <form id="demo-form" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                                <input type="text" id="first-name" name="first-name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                                <input type="text" id="last-name" name="last-name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Business Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                         <div>
                             <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
-                            <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                            <input type="text" id="company" name="company" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea>
+                            <label for="industry" class="block text-sm font-medium text-gray-700 mb-1">Industry</label>
+                            <select id="industry" name="industry" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">Select your industry</option>
+                                <option value="logistics">Logistics & Warehousing</option>
+                                <option value="retail">Retail & E-commerce</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="automotive">Automotive</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
-                        <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
-                            Send Message
+                        <div>
+                            <label for="employees" class="block text-sm font-medium text-gray-700 mb-1">Company Size</label>
+                            <select id="employees" name="employees" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">Select company size</option>
+                                <option value="1-50">1-50 employees</option>
+                                <option value="51-200">51-200 employees</option>
+                                <option value="201-1000">201-1000 employees</option>
+                                <option value="1000+">1000+ employees</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="use-case" class="block text-sm font-medium text-gray-700 mb-1">Use Case</label>
+                            <textarea id="use-case" name="use-case" rows="4" placeholder="Tell us about your barcode scanning needs..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            Request Enterprise Demo
                         </button>
                     </form>
                 </div>
@@ -403,43 +549,43 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-mobile-alt text-2xl text-indigo-400 mr-2"></i>
-                        <span class="text-xl font-bold">MDWebView</span>
+                        <i class="fas fa-qrcode text-2xl text-blue-400 mr-2"></i>
+                        <span class="text-xl font-bold">MDoom Enterprise</span>
                     </div>
                     <p class="text-gray-400">
-                        Secure, private mobile browsing for businesses.
+                        Enterprise barcode scanning solutions for modern businesses.
                     </p>
                 </div>
                 <div>
-                    <h4 class="font-semibold mb-4">Product</h4>
+                    <h4 class="font-semibold mb-4">Solutions</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
-                        <li><a href="#security" class="hover:text-white transition-colors">Security</a></li>
-                        <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
-                        <li><a href="#download" class="hover:text-white transition-colors">Download</a></li>
+                        <li><a href="#solutions" class="hover:text-white transition-colors">Barcode Scanning</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">Industry Solutions</a></li>
+                        <li><a href="#features" class="hover:text-white transition-colors">Enterprise Features</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Custom Development</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Industries</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#industries" class="hover:text-white transition-colors">Logistics & Warehousing</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">Retail & POS</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">Manufacturing</a></li>
+                        <li><a href="#industries" class="hover:text-white transition-colors">Healthcare</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-semibold mb-4">Support</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact Sales</a></li>
+                        <li><a href="/documentation.html" class="hover:text-white transition-colors">Documentation</a></li>
                         <li><a href="/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="mailto:support@mdoom.com" class="hover:text-white transition-colors">Technical Support</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 MDWebView. All rights reserved.</p>
+                <p>&copy; 2024 MDoom Enterprise Solutions. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -464,10 +610,59 @@
         const mobileMenu = document.querySelector('.mobile-menu');
 
         // Form submission handler
-        document.querySelector('form').addEventListener('submit', function(e) {
+        document.getElementById('demo-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
+            alert('Thank you for your interest! Our enterprise team will contact you within 24 hours to schedule your demo.');
         });
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stats-counter');
+            counters.forEach(counter => {
+                const target = counter.textContent;
+                const isPercent = target.includes('%');
+                const isPlus = target.includes('+');
+                const numericValue = parseInt(target.replace(/[^\d]/g, ''));
+                
+                let current = 0;
+                const increment = numericValue / 100;
+                
+                const updateCounter = () => {
+                    if (current < numericValue) {
+                        current += increment;
+                        let displayValue = Math.floor(current);
+                        
+                        if (isPercent) {
+                            displayValue += '%';
+                        } else if (isPlus) {
+                            displayValue += '+';
+                        }
+                        
+                        counter.textContent = displayValue;
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.stats-counter').closest('section');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
     </script>
 </body>
 </html>
