@@ -66,41 +66,59 @@
         .lang-switch.active:hover {
             background: #2563eb;
         }
-        [data-lang]:not([data-lang="en"]) {
+        
+        /* Language switching styles */
+        [data-lang="cz"] {
             display: none;
         }
+        [data-lang="en"] {
+            display: block;
+        }
+        
+        /* When Czech is selected */
         html[lang="cz"] [data-lang="en"] {
             display: none;
         }
         html[lang="cz"] [data-lang="cz"] {
             display: block;
         }
+        
+        /* For inline elements */
+        [data-lang="cz"].inline {
+            display: none;
+        }
+        [data-lang="en"].inline {
+            display: inline;
+        }
+        
+        html[lang="cz"] [data-lang="en"].inline {
+            display: none;
+        }
         html[lang="cz"] [data-lang="cz"].inline {
             display: inline;
         }
-        html[lang="cz"] [data-lang="cz"].inline-block {
-            display: inline-block;
+        
+        /* For flex elements */
+        [data-lang="cz"].flex {
+            display: none;
+        }
+        [data-lang="en"].flex {
+            display: flex;
+        }
+        
+        html[lang="cz"] [data-lang="en"].flex {
+            display: none;
         }
         html[lang="cz"] [data-lang="cz"].flex {
             display: flex;
         }
-        html[lang="cz"] [data-lang="cz"].grid {
-            display: grid;
-        }
-        [data-lang="cz"] {
+        
+        /* Mobile menu styles */
+        .mobile-menu {
             display: none;
         }
-        [data-lang="cz"].inline {
-            display: none;
-        }
-        [data-lang="cz"].inline-block {
-            display: none;
-        }
-        [data-lang="cz"].flex {
-            display: none;
-        }
-        [data-lang="cz"].grid {
-            display: none;
+        .mobile-menu.active {
+            display: block;
         }
     </style>
 </head>
@@ -142,10 +160,41 @@
                         <span class="lang-switch" data-lang-switch="cz">CZ</span>
                     </div>
                 </div>
-                <div class="md:hidden flex items-center">
+                <div class="md:hidden flex items-center space-x-4">
+                    <!-- Mobile Language Switch -->
+                    <div class="flex items-center space-x-1">
+                        <span class="lang-switch active" data-lang-switch="en">EN</span>
+                        <span class="lang-switch" data-lang-switch="cz">CZ</span>
+                    </div>
                     <button class="mobile-menu-button text-gray-700 hover:text-blue-600">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+                    <a href="#solutions" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+                        <span data-lang="en">Solutions</span>
+                        <span data-lang="cz">Řešení</span>
+                    </a>
+                    <a href="#industries" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+                        <span data-lang="en">Industries</span>
+                        <span data-lang="cz">Odvětví</span>
+                    </a>
+                    <a href="#features" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+                        <span data-lang="en">Features</span>
+                        <span data-lang="cz">Funkce</span>
+                    </a>
+                    <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+                        <span data-lang="en">Contact</span>
+                        <span data-lang="cz">Kontakt</span>
+                    </a>
+                    <a href="#demo" class="block px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors mx-3 text-center">
+                        <span data-lang="en">Request Demo</span>
+                        <span data-lang="cz">Vyžádat Demo</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -814,10 +863,7 @@
                                 <span data-lang="en">Use Case</span>
                                 <span data-lang="cz">Případ Použití</span>
                             </label>
-                            <textarea id="use-case" name="use-case" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                                <span data-lang="en" placeholder="Tell us about your barcode scanning needs..."></span>
-                                <span data-lang="cz" placeholder="Řekněte nám o vašich potřebách skenování čárových kódů..."></span>
-                            </textarea>
+                            <textarea id="use-case" name="use-case" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us about your barcode scanning needs..."></textarea>
                         </div>
                         <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                             <span data-lang="en">Request Enterprise Demo</span>
@@ -977,6 +1023,23 @@
         const preferredLang = localStorage.getItem('preferred-language') || 'en';
         switchLanguage(preferredLang);
         
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+            
+            // Close mobile menu when clicking on links
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+        
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -990,10 +1053,6 @@
                 }
             });
         });
-
-        // Mobile menu toggle
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const mobileMenu = document.querySelector('.mobile-menu');
 
         // Form submission handler
         document.getElementById('demo-form').addEventListener('submit', function(e) {
@@ -1049,9 +1108,9 @@
             });
         });
 
-        const statsSection = document.querySelector('.stats-counter').closest('section');
+        const statsSection = document.querySelector('.stats-counter');
         if (statsSection) {
-            observer.observe(statsSection);
+            observer.observe(statsSection.closest('section'));
         }
     </script>
 </body>
