@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "WebFetch(domain:play.google.com)",
+      "Bash(curl:*)"
+    ],
+    "deny": []
+  }
+}
