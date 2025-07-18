@@ -22,6 +22,54 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
+        
+        .lang-switch {
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .lang-switch.active {
+            background: #4f46e5;
+            color: white;
+        }
+        .lang-switch:hover {
+            background: #e5e7eb;
+        }
+        .lang-switch.active:hover {
+            background: #4338ca;
+        }
+        
+        /* Language switching styles */
+        [data-lang="cz"] {
+            display: none;
+        }
+        [data-lang="en"] {
+            display: block;
+        }
+        
+        /* When Czech is selected */
+        html[lang="cz"] [data-lang="en"] {
+            display: none;
+        }
+        html[lang="cz"] [data-lang="cz"] {
+            display: block;
+        }
+        
+        /* For inline elements */
+        [data-lang="cz"].inline {
+            display: none;
+        }
+        [data-lang="en"].inline {
+            display: inline;
+        }
+        
+        html[lang="cz"] [data-lang="en"].inline {
+            display: none;
+        }
+        html[lang="cz"] [data-lang="cz"].inline {
+            display: inline;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -38,8 +86,19 @@
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <a href="/" class="text-gray-700 hover:text-indigo-600 transition-colors">Home</a>
-                    <a href="/#download" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">Download</a>
+                    <a href="/" class="text-gray-700 hover:text-indigo-600 transition-colors">
+                        <span data-lang="en">Home</span>
+                        <span data-lang="cz">Domů</span>
+                    </a>
+                    <a href="/#download" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                        <span data-lang="en">Download</span>
+                        <span data-lang="cz">Stáhnout</span>
+                    </a>
+                    <!-- Language Switch -->
+                    <div class="flex items-center space-x-1 ml-4">
+                        <span class="lang-switch active" data-lang-switch="en">EN</span>
+                        <span class="lang-switch" data-lang-switch="cz">CZ</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -47,8 +106,14 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="mb-8">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">MDWebView Documentation</h1>
-            <p class="text-xl text-gray-600">Complete guide to using MDWebView for secure mobile browsing</p>
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                <span data-lang="en">MDWebView Documentation</span>
+                <span data-lang="cz">MDWebView Dokumentace</span>
+            </h1>
+            <p class="text-xl text-gray-600">
+                <span data-lang="en">Complete guide to using MDWebView for secure mobile browsing</span>
+                <span data-lang="cz">Kompletní průvodce používáním MDWebView pro bezpečné mobilní prohlížení</span>
+            </p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -343,7 +408,7 @@
                                 <i class="fas fa-envelope text-indigo-600 text-xl mr-4"></i>
                                 <div>
                                     <p class="font-semibold text-gray-900">Email Support</p>
-                                    <a href="mailto:mdoom2@gmail.com" class="text-indigo-600 hover:underline">mdoom2@gmail.com</a>
+                                    <a href="mailto:mdoom@mdoom.net" class="text-indigo-600 hover:underline">mdoom@mdoom.net</a>
                                 </div>
                             </div>
                             
@@ -380,6 +445,35 @@
     </div>
 
     <script>
+        // Language switching functionality
+        const langSwitchers = document.querySelectorAll('[data-lang-switch]');
+        const htmlElement = document.documentElement;
+        
+        function switchLanguage(lang) {
+            htmlElement.setAttribute('lang', lang);
+            localStorage.setItem('preferred-language', lang);
+            
+            // Update active language switcher
+            langSwitchers.forEach(switcher => {
+                switcher.classList.remove('active');
+                if (switcher.getAttribute('data-lang-switch') === lang) {
+                    switcher.classList.add('active');
+                }
+            });
+        }
+        
+        // Initialize language switchers
+        langSwitchers.forEach(switcher => {
+            switcher.addEventListener('click', () => {
+                const lang = switcher.getAttribute('data-lang-switch');
+                switchLanguage(lang);
+            });
+        });
+        
+        // Load preferred language from localStorage
+        const preferredLang = localStorage.getItem('preferred-language') || 'en';
+        switchLanguage(preferredLang);
+        
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
