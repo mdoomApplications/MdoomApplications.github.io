@@ -9,46 +9,299 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        /* Modern gradient backgrounds */
         .gradient-bg {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 15s ease infinite;
         }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Glassmorphism effects */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Modern navigation */
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Enhanced hover effects */
         .card-hover {
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
         }
+        
+        .card-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .card-hover:hover::before {
+            left: 100%;
+        }
+        
         .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
         }
+        
+        /* Modern feature icons */
         .feature-icon {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
         }
-        .industry-bg {
-            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
-        }
+        
+        /* Enhanced stats section */
         .stats-counter {
             font-size: 3rem;
             font-weight: 800;
-            color: #1e3a8a;
-        }
-        .kiosk-pattern {
-            background-image: repeating-linear-gradient(
-                45deg,
-                #f3f4f6 0px,
-                #f3f4f6 10px,
-                transparent 10px,
-                transparent 20px
-            );
-            height: 60px;
-            opacity: 0.3;
-        }
-        .erp-icon {
-            background: linear-gradient(135deg, #dc2626 0%, #f59e0b 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Modern device mockup */
+        .device-frame {
+            background: linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 100%);
+            padding: 12px;
+            border-radius: 30px;
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+        
+        .device-frame::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), transparent);
+            border-radius: 28px;
+            pointer-events: none;
+        }
+        
+        .device-screen {
+            background: #ffffff;
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Modern pattern overlay */
+        .kiosk-pattern {
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            height: 60px;
+            opacity: 0.6;
+        }
+        
+        /* Enhanced ERP icons */
+        .erp-icon {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 50%, #66bb6a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+        }
+        
+        /* Modern CTA section */
+        .industry-bg {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .industry-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: float 20s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        /* Floating particles effect */
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .floating-particles::before,
+        .floating-particles::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: floatUp 8s infinite ease-in-out;
+        }
+        
+        .floating-particles::before {
+            left: 20%;
+            animation-delay: 0s;
+        }
+        
+        .floating-particles::after {
+            left: 80%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100vh) scale(0);
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(90vh) scale(1);
+            }
+            90% {
+                opacity: 1;
+                transform: translateY(10vh) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(0) scale(0);
+            }
+        }
+        
+        /* Enhanced system mockup animations */
+        .system-mockup {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 12px 0;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .system-mockup:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Enhanced button styles */
+        .btn-modern {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 12px;
+            color: white;
+            padding: 12px 24px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-modern:hover::before {
+            left: 100%;
+        }
+        
+        .btn-modern:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        /* Enhanced stats animation */
+        .stats-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-5px) scale(1.05);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        /* System gallery enhancements */
+        .system-showcase {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .system-showcase:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 0.15);
         }
         .lang-switch {
             cursor: pointer;
@@ -224,7 +477,7 @@
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+    <nav class="nav-glass shadow-lg fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
@@ -325,7 +578,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="gradient-bg text-white pt-20">
+    <section class="gradient-bg text-white pt-20 relative">
+        <div class="floating-particles"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
@@ -343,13 +597,13 @@
                         <span data-lang="cz">Transformujte jakýkoli ERP systém na fullscreen mobilní aplikaci. Ideální pro skladové operace, logistiku a průmyslová prostředí s vlastní URL konfigurací.</span>
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://play.google.com/store/apps/details?id=com.mdoom.webview" target="_blank" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">
-                            <i class="fab fa-google-play mr-2"></i>
+                        <a href="https://play.google.com/store/apps/details?id=com.mdoom.webview" target="_blank" class="btn-modern bg-white text-blue-600 hover:bg-gray-100">
+                            <i class="fab fa-google-play"></i>
                             <span data-lang="en">Private Use - Google Play</span>
                             <span data-lang="cz">Soukromé Použití - Google Play</span>
                         </a>
-                        <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center">
-                            <i class="fas fa-envelope mr-2"></i>
+                        <a href="#contact" class="btn-modern border-2 border-white text-white hover:bg-white hover:text-blue-600">
+                            <i class="fas fa-envelope"></i>
                             <span data-lang="en">Enterprise Contact</span>
                             <span data-lang="cz">Podnikový Kontakt</span>
                         </a>
@@ -607,13 +861,13 @@
                     <span data-lang="cz">Nakonfigurujte jakoukoliv webovou systémovou URL a okamžitě vytvořte vyhrazenou kiosk aplikaci</span>
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://play.google.com/store/apps/details?id=com.mdoom.webview" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
-                        <i class="fab fa-google-play mr-2"></i>
+                    <a href="https://play.google.com/store/apps/details?id=com.mdoom.webview" target="_blank" class="btn-modern">
+                        <i class="fab fa-google-play"></i>
                         <span data-lang="en">Private Use - Google Play</span>
                         <span data-lang="cz">Soukromé Použití - Google Play</span>
                     </a>
-                    <a href="#contact" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors inline-flex items-center">
-                        <i class="fas fa-envelope mr-2"></i>
+                    <a href="#contact" class="btn-modern border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
+                        <i class="fas fa-envelope"></i>
                         <span data-lang="en">Enterprise Contact</span>
                         <span data-lang="cz">Podnikový Kontakt</span>
                     </a>
@@ -623,10 +877,11 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-16 bg-gradient-to-r from-blue-50 to-purple-50 relative overflow-hidden">
+        <div class="absolute inset-0 bg-white/50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-                <div class="card-hover p-6">
+                <div class="stats-card">
                     <div class="stats-counter">100+</div>
                     <p class="text-lg font-semibold text-gray-700">
                         <span data-lang="en">ERP Systems Supported</span>
@@ -637,7 +892,7 @@
                         <span data-lang="cz">Jakýkoli webový ERP systém</span>
                     </p>
                 </div>
-                <div class="card-hover p-6">
+                <div class="stats-card">
                     <div class="stats-counter">24/7</div>
                     <p class="text-lg font-semibold text-gray-700">
                         <span data-lang="en">Kiosk Mode</span>
@@ -648,7 +903,7 @@
                         <span data-lang="cz">Nepřetržitý provoz</span>
                     </p>
                 </div>
-                <div class="card-hover p-6">
+                <div class="stats-card">
                     <div class="stats-counter">500+</div>
                     <p class="text-lg font-semibold text-gray-700">
                         <span data-lang="en">Handheld Devices</span>
@@ -659,7 +914,7 @@
                         <span data-lang="cz">Testovaná kompatibilita</span>
                     </p>
                 </div>
-                <div class="card-hover p-6">
+                <div class="stats-card">
                     <div class="stats-counter">99.9%</div>
                     <p class="text-lg font-semibold text-gray-700">
                         <span data-lang="en">Uptime</span>
@@ -689,7 +944,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                <div class="glass-card p-8 rounded-xl shadow-lg">
                     <div class="feature-icon text-4xl mb-4">
                         <i class="fas fa-expand-arrows-alt"></i>
                     </div>
@@ -703,7 +958,7 @@
                     </p>
                 </div>
 
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                <div class="glass-card p-8 rounded-xl shadow-lg">
                     <div class="feature-icon text-4xl mb-4">
                         <i class="fas fa-link"></i>
                     </div>
@@ -717,7 +972,7 @@
                     </p>
                 </div>
 
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                <div class="glass-card p-8 rounded-xl shadow-lg">
                     <div class="feature-icon text-4xl mb-4">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
@@ -731,7 +986,7 @@
                     </p>
                 </div>
 
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                <div class="glass-card p-8 rounded-xl shadow-lg">
                     <div class="feature-icon text-4xl mb-4">
                         <i class="fas fa-shield-alt"></i>
                     </div>
@@ -745,7 +1000,7 @@
                     </p>
                 </div>
 
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                <div class="glass-card p-8 rounded-xl shadow-lg">
                     <div class="feature-icon text-4xl mb-4">
                         <i class="fas fa-cog"></i>
                     </div>
@@ -759,7 +1014,7 @@
                     </p>
                 </div>
 
-                <div class="card-hover bg-white p-8 rounded-xl shadow-lg">
+                <div class="glass-card p-8 rounded-xl shadow-lg">
                     <div class="feature-icon text-4xl mb-4">
                         <i class="fas fa-lock"></i>
                     </div>
@@ -791,7 +1046,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card-hover bg-gray-50 p-8 rounded-xl shadow-lg">
+                <div class="glass-card p-8 rounded-xl shadow-lg">
                     <div class="erp-icon text-4xl mb-4">
                         <i class="fas fa-warehouse"></i>
                     </div>
@@ -822,7 +1077,7 @@
                     </ul>
                 </div>
 
-                <div class="card-hover bg-gray-50 p-8 rounded-xl shadow-lg">
+                <div class="glass-card p-8 rounded-xl shadow-lg">
                     <div class="erp-icon text-4xl mb-4">
                         <i class="fas fa-industry"></i>
                     </div>
@@ -853,7 +1108,7 @@
                     </ul>
                 </div>
 
-                <div class="card-hover bg-gray-50 p-8 rounded-xl shadow-lg">
+                <div class="glass-card p-8 rounded-xl shadow-lg">
                     <div class="erp-icon text-4xl mb-4">
                         <i class="fas fa-desktop"></i>
                     </div>
@@ -902,7 +1157,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="card-hover bg-white p-6 rounded-xl shadow-lg text-center">
+                <div class="glass-card p-6 rounded-xl shadow-lg text-center">
                     <div class="text-4xl mb-4 text-blue-600">
                         <i class="fas fa-barcode"></i>
                     </div>
@@ -916,7 +1171,7 @@
                     </p>
                 </div>
 
-                <div class="card-hover bg-white p-6 rounded-xl shadow-lg text-center">
+                <div class="glass-card p-6 rounded-xl shadow-lg text-center">
                     <div class="text-4xl mb-4 text-green-600">
                         <i class="fas fa-tablet-alt"></i>
                     </div>
@@ -930,7 +1185,7 @@
                     </p>
                 </div>
 
-                <div class="card-hover bg-white p-6 rounded-xl shadow-lg text-center">
+                <div class="glass-card p-6 rounded-xl shadow-lg text-center">
                     <div class="text-4xl mb-4 text-purple-600">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
@@ -944,7 +1199,7 @@
                     </p>
                 </div>
 
-                <div class="card-hover bg-white p-6 rounded-xl shadow-lg text-center">
+                <div class="glass-card p-6 rounded-xl shadow-lg text-center">
                     <div class="text-4xl mb-4 text-orange-600">
                         <i class="fas fa-tv"></i>
                     </div>
@@ -973,13 +1228,13 @@
                 <span data-lang="cz">Získejte náš WebView wrapper z Google Play pro soukromé použití, nebo nás kontaktujte pro podnikové nasazení a vlastní řešení.</span>
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://play.google.com/store/apps/details?id=com.mdoom.webview" target="_blank" class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">
-                    <i class="fab fa-google-play mr-2"></i>
+                <a href="https://play.google.com/store/apps/details?id=com.mdoom.webview" target="_blank" class="btn-modern bg-white text-green-600 hover:bg-gray-100">
+                    <i class="fab fa-google-play"></i>
                     <span data-lang="en">Private Use - Google Play</span>
                     <span data-lang="cz">Soukromé Použití - Google Play</span>
                 </a>
-                <a href="mailto:mdoom@mdoom.net" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">
-                    <i class="fas fa-envelope mr-2"></i>
+                <a href="mailto:mdoom@mdoom.net" class="btn-modern border-2 border-white text-white hover:bg-white hover:text-green-600">
+                    <i class="fas fa-envelope"></i>
                     <span data-lang="en">Enterprise Contact</span>
                     <span data-lang="cz">Podnikový Kontakt</span>
                 </a>
@@ -1062,7 +1317,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="glass-card p-8 rounded-xl shadow-lg">
                     <h3 class="text-2xl font-bold text-gray-900 mb-6">
                         <span data-lang="en">Direct Contact Options</span>
                         <span data-lang="cz">Přímé Kontaktní Možnosti</span>
