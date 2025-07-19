@@ -482,7 +482,7 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <img src="logo.svg" alt="MDWebview" class="w-8 h-8 mr-2">
+                        <img src="logo.png" alt="MDWebview" class="w-8 h-8 mr-2">
                         <span class="text-xl font-bold text-gray-900">MDWebview</span>
                     </div>
                 </div>
@@ -502,6 +502,10 @@
                     <a href="#devices" class="text-gray-700 hover:text-blue-600 transition-colors">
                         <span data-lang="en">Devices</span>
                         <span data-lang="cz">Zařízení</span>
+                    </a>
+                    <a href="#case-study" class="text-gray-700 hover:text-blue-600 transition-colors">
+                        <span data-lang="en">Case Study</span>
+                        <span data-lang="cz">Případová Studie</span>
                     </a>
                     <a href="documentation.html" class="text-gray-700 hover:text-blue-600 transition-colors">
                         <span data-lang="en">Documentation</span>
@@ -555,6 +559,10 @@
                     <a href="#devices" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
                         <span data-lang="en">Devices</span>
                         <span data-lang="cz">Zařízení</span>
+                    </a>
+                    <a href="#case-study" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
+                        <span data-lang="en">Case Study</span>
+                        <span data-lang="cz">Případová Studie</span>
                     </a>
                     <a href="documentation.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors">
                         <span data-lang="en">Documentation</span>
@@ -690,32 +698,42 @@
                     </div>
                     <div class="device-frame max-w-xs mx-auto">
                         <div class="device-screen aspect-[9/16] p-3">
+                            <!-- SAP Navigation Menu -->
                             <div class="system-mockup">
                                 <div class="system-header sap-theme">
-                                    <i class="fas fa-cube mr-2"></i>
-                                    <span data-lang="en">SAP ERP - Warehouse</span>
-                                    <span data-lang="cz">SAP ERP - Sklad</span>
+                                    <i class="fas fa-bars mr-2"></i>
+                                    <span data-lang="en">SAP Menu</span>
+                                    <span data-lang="cz">SAP Menu</span>
                                 </div>
-                                <div class="system-content">
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                </div>
-                                <div class="system-icon">
-                                    <i class="fas fa-cube"></i>
+                                <div class="system-content space-y-2">
+                                    <div class="flex items-center bg-blue-100 p-2 rounded text-xs">
+                                        <i class="fas fa-warehouse text-blue-600 mr-2"></i>
+                                        <span data-lang="en">Warehouse Mgmt</span>
+                                        <span data-lang="cz">Řízení Skladu</span>
+                                    </div>
+                                    <div class="flex items-center bg-blue-100 p-2 rounded text-xs">
+                                        <i class="fas fa-chart-line text-blue-600 mr-2"></i>
+                                        <span data-lang="en">Inventory Report</span>
+                                        <span data-lang="cz">Report Zásob</span>
+                                    </div>
+                                    <div class="flex items-center bg-blue-100 p-2 rounded text-xs">
+                                        <i class="fas fa-truck text-blue-600 mr-2"></i>
+                                        <span data-lang="en">Goods Receipt</span>
+                                        <span data-lang="cz">Příjem Zboží</span>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- SAP Transaction View -->
                             <div class="system-mockup">
                                 <div class="system-header sap-theme">
-                                    <i class="fas fa-chart-bar mr-2"></i>
-                                    <span data-lang="en">Inventory Control</span>
-                                    <span data-lang="cz">Kontrola Zásob</span>
+                                    <i class="fas fa-edit mr-2"></i>
+                                    <span data-lang="en">Transaction: MM01</span>
+                                    <span data-lang="cz">Transakce: MM01</span>
                                 </div>
-                                <div class="system-content">
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
+                                <div class="system-content space-y-1">
+                                    <div class="text-xs text-gray-600 bg-gray-100 p-1 rounded">Material Number: ________</div>
+                                    <div class="text-xs text-gray-600 bg-gray-100 p-1 rounded">Material Type: FERT</div>
+                                    <div class="text-xs text-gray-600 bg-blue-200 p-1 rounded font-semibold">Industry Sector: M</div>
                                 </div>
                             </div>
                         </div>
@@ -734,32 +752,47 @@
                     </div>
                     <div class="device-frame max-w-xs mx-auto">
                         <div class="device-screen aspect-[9/16] p-3">
+                            <!-- POS Product Scan Interface -->
                             <div class="system-mockup">
                                 <div class="system-header pos-theme">
-                                    <i class="fas fa-cash-register mr-2"></i>
-                                    <span data-lang="en">POS Terminal</span>
-                                    <span data-lang="cz">POS Terminál</span>
+                                    <i class="fas fa-barcode mr-2"></i>
+                                    <span data-lang="en">Product Scan</span>
+                                    <span data-lang="cz">Skenování Produktu</span>
                                 </div>
-                                <div class="system-content">
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                </div>
-                                <div class="system-icon">
-                                    <i class="fas fa-cash-register"></i>
+                                <div class="system-content space-y-2">
+                                    <div class="flex justify-between items-center bg-green-100 p-2 rounded text-xs">
+                                        <span>Cola 500ml</span>
+                                        <span class="font-bold">$2.99</span>
+                                    </div>
+                                    <div class="flex justify-between items-center bg-green-100 p-2 rounded text-xs">
+                                        <span>Bread White</span>
+                                        <span class="font-bold">$1.49</span>
+                                    </div>
+                                    <div class="flex justify-between items-center bg-yellow-100 p-2 rounded text-xs border-2 border-yellow-400">
+                                        <span data-lang="en">Scan Next Item</span>
+                                        <span data-lang="cz">Skenovat Další</span>
+                                        <i class="fas fa-qrcode"></i>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- POS Payment Interface -->
                             <div class="system-mockup">
                                 <div class="system-header pos-theme">
-                                    <i class="fas fa-shopping-cart mr-2"></i>
-                                    <span data-lang="en">Customer Orders</span>
-                                    <span data-lang="cz">Objednávky Zákazníků</span>
+                                    <i class="fas fa-credit-card mr-2"></i>
+                                    <span data-lang="en">Payment</span>
+                                    <span data-lang="cz">Platba</span>
                                 </div>
-                                <div class="system-content">
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
+                                <div class="system-content space-y-1">
+                                    <div class="text-xs bg-gray-100 p-1 rounded flex justify-between">
+                                        <span data-lang="en">Subtotal:</span>
+                                        <span data-lang="cz">Mezisouček:</span>
+                                        <span class="font-bold">$4.48</span>
+                                    </div>
+                                    <div class="text-xs bg-green-200 p-1 rounded flex justify-between font-bold">
+                                        <span data-lang="en">TOTAL:</span>
+                                        <span data-lang="cz">CELKEM:</span>
+                                        <span>$4.48</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -778,32 +811,48 @@
                     </div>
                     <div class="device-frame max-w-xs mx-auto">
                         <div class="device-screen aspect-[9/16] p-3">
+                            <!-- Hotel Reception Interface -->
                             <div class="system-mockup">
                                 <div class="system-header reservation-theme">
-                                    <i class="fas fa-calendar-alt mr-2"></i>
-                                    <span data-lang="en">Booking Calendar</span>
-                                    <span data-lang="cz">Rezervační Kalendář</span>
+                                    <i class="fas fa-bed mr-2"></i>
+                                    <span data-lang="en">Room Status</span>
+                                    <span data-lang="cz">Stav Pokojů</span>
                                 </div>
-                                <div class="system-content">
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                </div>
-                                <div class="system-icon">
-                                    <i class="fas fa-calendar-alt"></i>
+                                <div class="system-content space-y-1">
+                                    <div class="flex justify-between items-center bg-green-100 p-1 rounded text-xs">
+                                        <span>Room 101</span>
+                                        <span class="bg-green-500 text-white px-2 py-1 rounded-full text-xs">FREE</span>
+                                    </div>
+                                    <div class="flex justify-between items-center bg-red-100 p-1 rounded text-xs">
+                                        <span>Room 102</span>
+                                        <span class="bg-red-500 text-white px-2 py-1 rounded-full text-xs">BUSY</span>
+                                    </div>
+                                    <div class="flex justify-between items-center bg-yellow-100 p-1 rounded text-xs">
+                                        <span>Room 103</span>
+                                        <span class="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs">CLEAN</span>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- Guest Check-in -->
                             <div class="system-mockup">
                                 <div class="system-header reservation-theme">
-                                    <i class="fas fa-user-friends mr-2"></i>
-                                    <span data-lang="en">Guest Management</span>
-                                    <span data-lang="cz">Správa Hostů</span>
+                                    <i class="fas fa-user-check mr-2"></i>
+                                    <span data-lang="en">Check-in</span>
+                                    <span data-lang="cz">Přihlášení</span>
                                 </div>
-                                <div class="system-content">
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
+                                <div class="system-content space-y-1">
+                                    <div class="text-xs bg-orange-100 p-1 rounded">
+                                        <span data-lang="en">Guest: John Smith</span>
+                                        <span data-lang="cz">Host: John Smith</span>
+                                    </div>
+                                    <div class="text-xs bg-orange-100 p-1 rounded">
+                                        <span data-lang="en">Arrival: Today 14:00</span>
+                                        <span data-lang="cz">Příjezd: Dnes 14:00</span>
+                                    </div>
+                                    <div class="bg-orange-500 text-white p-1 rounded text-center text-xs font-bold">
+                                        <span data-lang="en">CONFIRM</span>
+                                        <span data-lang="cz">POTVRDIT</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -822,32 +871,45 @@
                     </div>
                     <div class="device-frame max-w-xs mx-auto">
                         <div class="device-screen aspect-[9/16] p-3">
+                            <!-- Warehouse Picking Interface -->
                             <div class="system-mockup">
                                 <div class="system-header warehouse-theme">
-                                    <i class="fas fa-warehouse mr-2"></i>
-                                    <span data-lang="en">WMS Dashboard</span>
-                                    <span data-lang="cz">WMS Dashboard</span>
+                                    <i class="fas fa-list-check mr-2"></i>
+                                    <span data-lang="en">Pick List</span>
+                                    <span data-lang="cz">Picklist</span>
                                 </div>
-                                <div class="system-content">
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                </div>
-                                <div class="system-icon">
-                                    <i class="fas fa-warehouse"></i>
+                                <div class="system-content space-y-1">
+                                    <div class="bg-green-100 p-1 rounded text-xs flex items-center">
+                                        <i class="fas fa-check-circle text-green-600 mr-1"></i>
+                                        <span>A1-01-03: Widget A (5x)</span>
+                                    </div>
+                                    <div class="bg-purple-200 p-1 rounded text-xs flex items-center border-2 border-purple-600">
+                                        <i class="fas fa-crosshairs text-purple-600 mr-1"></i>
+                                        <span>B2-05-12: Widget B (3x)</span>
+                                    </div>
+                                    <div class="bg-gray-100 p-1 rounded text-xs flex items-center">
+                                        <i class="fas fa-circle text-gray-400 mr-1"></i>
+                                        <span>C3-02-07: Widget C (2x)</span>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- Scan Confirmation -->
                             <div class="system-mockup">
                                 <div class="system-header warehouse-theme">
-                                    <i class="fas fa-boxes mr-2"></i>
-                                    <span data-lang="en">Inventory Tracking</span>
-                                    <span data-lang="cz">Sledování Zásob</span>
+                                    <i class="fas fa-qrcode mr-2"></i>
+                                    <span data-lang="en">Scan Location</span>
+                                    <span data-lang="cz">Skenovat Lokaci</span>
                                 </div>
-                                <div class="system-content">
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
-                                    <div class="system-row"></div>
+                                <div class="system-content space-y-1">
+                                    <div class="text-xs bg-purple-100 p-1 rounded text-center">
+                                        <span data-lang="en">Expected: B2-05-12</span>
+                                        <span data-lang="cz">Očekáváno: B2-05-12</span>
+                                    </div>
+                                    <div class="bg-purple-600 text-white p-2 rounded text-center text-xs font-bold">
+                                        <i class="fas fa-camera mr-1"></i>
+                                        <span data-lang="en">SCAN BARCODE</span>
+                                        <span data-lang="cz">SKENOVAT KÓD</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -866,7 +928,7 @@
                         <span data-lang="en">Private Use - Google Play</span>
                         <span data-lang="cz">Soukromé Použití - Google Play</span>
                     </a>
-                    <a href="#contact" class="btn-modern border-2 border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white bg-white font-semibold">
+                    <a href="#contact" class="btn-modern border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white bg-white font-semibold">
                         <i class="fas fa-envelope"></i>
                         <span data-lang="en">Enterprise Contact</span>
                         <span data-lang="cz">Podnikový Kontakt</span>
@@ -1242,6 +1304,239 @@
         </div>
     </section>
 
+    <!-- Case Study Section -->
+    <section id="case-study" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    <span data-lang="en">Case Study: Enterprise Deployment</span>
+                    <span data-lang="cz">Případová Studie: Podnikové Nasazení</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    <span data-lang="en">How Contoso deployed MDWebview across 1,000+ Android devices for secure ERP access</span>
+                    <span data-lang="cz">Jak společnost Contoso nasadila MDWebview na více než 1000 Android zařízení pro bezpečný přístup k ERP</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <!-- Case Study Content -->
+                <div class="space-y-8">
+                    <div class="glass-card p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                            <span data-lang="en">The Challenge</span>
+                            <span data-lang="cz">Výzva</span>
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            <span data-lang="en">Contoso, a global distribution leader, needed to modernize warehouse operations by migrating to a web-based ERP system while deploying over 1,000 handheld Android scanners securely.</span>
+                            <span data-lang="cz">Společnost Contoso, globální lídr v distribuci, potřebovala modernizovat skladové operace přechodem na webový ERP systém a zároveň bezpečně nasadit více než 1000 ručních Android čteček.</span>
+                        </p>
+                        
+                        <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                            <span data-lang="en">Key Requirements:</span>
+                            <span data-lang="cz">Klíčové Požadavky:</span>
+                        </h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                <span data-lang="en">Complete device lockdown for security</span>
+                                <span data-lang="cz">Úplné uzamčení zařízení pro bezpečnost</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                <span data-lang="en">Single-purpose ERP access only</span>
+                                <span data-lang="cz">Pouze jednoúčelový přístup k ERP</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                <span data-lang="en">Automated barcode scanning workflow</span>
+                                <span data-lang="cz">Automatizovaný workflow skenování čárových kódů</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                <span data-lang="en">Scalable deployment process</span>
+                                <span data-lang="cz">Škálovatelný proces nasazení</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                            <span data-lang="en">The Solution</span>
+                            <span data-lang="cz">Řešení</span>
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">1</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">
+                                        <span data-lang="en">Device Staging</span>
+                                        <span data-lang="cz">Příprava Zařízení</span>
+                                    </h4>
+                                    <p class="text-gray-600 text-sm">
+                                        <span data-lang="en">Standardized setup with asset naming and display configuration</span>
+                                        <span data-lang="cz">Standardizované nastavení s pojmenováním majetku a konfigurací displeje</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">
+                                        <span data-lang="en">MDWebview Configuration</span>
+                                        <span data-lang="cz">Konfigurace MDWebview</span>
+                                    </h4>
+                                    <p class="text-gray-600 text-sm">
+                                        <span data-lang="en">URL setup, kiosk mode activation, and SSL certificate import</span>
+                                        <span data-lang="cz">Nastavení URL, aktivace kiosk módu a import SSL certifikátu</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">
+                                        <span data-lang="en">DataWedge Integration</span>
+                                        <span data-lang="cz">Integrace DataWedge</span>
+                                    </h4>
+                                    <p class="text-gray-600 text-sm">
+                                        <span data-lang="en">Automatic "Enter" keypress after scans for seamless workflow</span>
+                                        <span data-lang="cz">Automatické stisknutí "Enter" po skenování pro bezproblémový workflow</span>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center mr-4">
+                                    <span class="text-white font-bold">4</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900">
+                                        <span data-lang="en">Final Lockdown</span>
+                                        <span data-lang="cz">Finální Uzamčení</span>
+                                    </h4>
+                                    <p class="text-gray-600 text-sm">
+                                        <span data-lang="en">Enterprise Home Screen deployment for complete security</span>
+                                        <span data-lang="cz">Nasazení Enterprise Home Screen pro úplnou bezpečnost</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results and Benefits -->
+                <div class="space-y-8">
+                    <div class="glass-card p-8 rounded-xl shadow-lg bg-gradient-to-br from-green-50 to-blue-50">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                            <span data-lang="en">Results Achieved</span>
+                            <span data-lang="cz">Dosažené Výsledky</span>
+                        </h3>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-green-600">1000+</div>
+                                <p class="text-sm text-gray-600">
+                                    <span data-lang="en">Devices Deployed</span>
+                                    <span data-lang="cz">Nasazených Zařízení</span>
+                                </p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-blue-600">100%</div>
+                                <p class="text-sm text-gray-600">
+                                    <span data-lang="en">Security Compliance</span>
+                                    <span data-lang="cz">Bezpečnostní Compliance</span>
+                                </p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-purple-600">50%</div>
+                                <p class="text-sm text-gray-600">
+                                    <span data-lang="en">Faster Data Entry</span>
+                                    <span data-lang="cz">Rychlejší Zadávání</span>
+                                </p>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-orange-600">Zero</div>
+                                <p class="text-sm text-gray-600">
+                                    <span data-lang="en">Training Required</span>
+                                    <span data-lang="cz">Nutné Školení</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <h4 class="text-lg font-semibold text-gray-900">
+                                <span data-lang="en">Key Benefits:</span>
+                                <span data-lang="cz">Klíčové Přínosy:</span>
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-shield-alt text-green-500 mr-3"></i>
+                                    <span class="text-gray-700">
+                                        <span data-lang="en">Total device security and lockdown</span>
+                                        <span data-lang="cz">Úplná bezpečnost a uzamčení zařízení</span>
+                                    </span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-rocket text-blue-500 mr-3"></i>
+                                    <span class="text-gray-700">
+                                        <span data-lang="en">Streamlined warehouse operations</span>
+                                        <span data-lang="cz">Zefektivnění skladových operací</span>
+                                    </span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-users text-purple-500 mr-3"></i>
+                                    <span class="text-gray-700">
+                                        <span data-lang="en">Zero training requirements</span>
+                                        <span data-lang="cz">Nulové požadavky na školení</span>
+                                    </span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-sync-alt text-orange-500 mr-3"></i>
+                                    <span class="text-gray-700">
+                                        <span data-lang="en">Future-proof web system integration</span>
+                                        <span data-lang="cz">Připravenost na budoucí webové systémy</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Download CTA in Case Study -->
+                    <div class="glass-card p-8 rounded-xl shadow-lg bg-gradient-to-br from-blue-50 to-purple-50 text-center">
+                        <h4 class="text-xl font-bold text-gray-900 mb-4">
+                            <span data-lang="en">Ready for Your Enterprise?</span>
+                            <span data-lang="cz">Připraveni na Váš Podnik?</span>
+                        </h4>
+                        <p class="text-gray-600 mb-6">
+                            <span data-lang="en">Start with our private version or contact us for enterprise deployment</span>
+                            <span data-lang="cz">Začněte s naší soukromou verzí nebo nás kontaktujte pro podnikové nasazení</span>
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <a href="https://play.google.com/store/apps/details?id=com.mdoom.webview" target="_blank" class="btn-modern bg-blue-600 text-white hover:bg-blue-700">
+                                <i class="fab fa-google-play"></i>
+                                <span data-lang="en">Try Private Version</span>
+                                <span data-lang="cz">Vyzkoušet Soukromou</span>
+                            </a>
+                            <a href="#contact" class="btn-modern border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white bg-white">
+                                <i class="fas fa-envelope"></i>
+                                <span data-lang="en">Enterprise Contact</span>
+                                <span data-lang="cz">Podnikový Kontakt</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1394,7 +1689,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <img src="logo.svg" alt="MDWebview" class="w-8 h-8 mr-2">
+                        <img src="logo.png" alt="MDWebview" class="w-8 h-8 mr-2">
                         <span class="text-xl font-bold">MDWebview</span>
                     </div>
                     <p class="text-gray-400">
